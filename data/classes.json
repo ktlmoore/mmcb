@@ -17,13 +17,14 @@
 		"id": "class_mage",
 		"name": "Mage",
 		"description": "Capable of using into one of five magical rites to call forth arcane power to overcome the challenges that face them.",
-		"feature": "Spellcasting",
+		"feature": "skill_spellcasting",
 		"image": "mage.png"
 	},
 	"class_priest": {
 		"id": "class_priest",
 		"name": "Priest",
 		"description": "Clerics capable of calling down divine favour to empower them in battle and work miracles.",
+		"feature": "skill_divineAura",
 		"image": "priest.png"
 	},
 	"class_wayfinder": {
