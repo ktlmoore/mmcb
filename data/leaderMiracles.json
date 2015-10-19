@@ -1,0 +1,9 @@
+{
+	"miracles": {
+		"level1": ["skill_embolden", "skill_dropYourWeapon"],
+		"level2": ["skill_instilMight", "skill_strikeThemDown", "skill_sapWill", "skill_hearMe"],
+		"level3": ["skill_cowerBeforeMe", "skill_improvedDropYourWeapon", "skill_ceaseYourDeceptions", "skill_cutThemDown"],
+		"level4": ["skill_gatherYourMight", "skill_fightOn", "skill_youDareNotStrikeMe"],
+		"level5": ["skill_fleeBeforeMe", "skill_unendingFervour"]
+	}
+}

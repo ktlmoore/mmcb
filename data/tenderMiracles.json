@@ -1,0 +1,9 @@
+{
+	"miracles": {
+		"level1": ["skill_healingLight", "skill_geyser"],
+		"level2": ["skill_healingWave", "skill_stayTheClaw", "skill_waveOfFertility", "skill_convalescence"],
+		"level3": ["skill_healingTouch", "skill_wardTheWasting", "skill_createPlants", "skill_masterOfBeasts"],
+		"level4": ["skill_rejuvenation", "skill_healingFlood", "skill_purificationOfTheBody"],
+		"level5": ["skill_waveOfRejuvenation", "skill_resurrection"]
+	}
+}

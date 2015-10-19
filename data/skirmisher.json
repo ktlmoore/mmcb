@@ -1,0 +1,320 @@
+{
+	"feature": "skill_agility",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_survivalist",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_nimbleLvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_larceny",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_diplomacy",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_useDagger",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_ambidextrous",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_useBow",
+				"preReqs": {}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_usingTheLandLvl2",
+				"preReqs": {
+					"and": ["skill_survivalist"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_backstab",
+				"preReqs": {
+					"and": ["skill_larceny"]
+				}
+			},
+			{
+				"skill": "skill_flanking",
+				"preReqs": {
+					"and": ["skill_flanking"]
+				}
+			},
+			{
+				"skill": "skill_pickpocket",
+				"preReqs": {
+					"and": ["skill_larceny"]
+				}
+			},
+			{
+				"skill": "skill_fastTalk",
+				"preReqs": {
+					"and": ["skill_diplomacy"]
+				}
+			},
+			{
+				"skill": "skill_daggerMastery1",
+				"preReqs": {
+					"and": ["skill_useDagger"]
+				}
+			},
+			{
+				"skill": "skill_poisonDaggerUseLvl2",
+				"preReqs": {
+					"and": ["skill_daggerMastery1"]
+				}
+			},
+			{
+				"skill": "skill_daggerTalent1",
+				"preReqs": {
+					"and": ["skill_daggerMastery1"]
+				}
+			},
+			{
+				"skill": "skill_mainGaucheSwiftness",
+				"preReqs": {
+					"and": ["skill_useDagger"]
+				}
+			},
+			{
+				"skill": "skill_twinDefensiveSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_ambidextrous"]
+				}
+			},
+			{
+				"skill": "skill_bowMastery1",
+				"preReqs": {
+					"and": ["skill_useBow"]
+				}
+			},
+			{
+				"skill": "skill_piercingArrows",
+				"preReqs": {
+					"and": ["skill_bowMastery1"]
+				}
+			},
+			{
+				"skill": "skill_bowTalent1",
+				"preReqs": {
+					"and": ["skill_bowMastery1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_usingTheLandLvl3",
+				"preReqs": {
+					"and": ["skill_usingTheLandLvl2"]
+				}
+			},
+			{
+				"skill": "skill_guide",
+				"preReqs": {
+					"and": ["skill_usingTheLandLvl2"]
+				}
+			},
+			{
+				"skill": "skill_masterSurvivalist",
+				"preReqs": {
+					"and": ["skill_survivalist"]
+				}
+			},
+			{
+				"skill": "skill_improvedAgility",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_nimbleLvl3",
+				"preReqs": {
+					"and": ["skill_nimbleLvl1"]
+				}
+			},
+			{
+				"skill": "skill_hamstring",
+				"preReqs": {
+					"and": ["skill_backstab"]
+				}
+			},
+			{
+				"skill": "skill_edificeer",
+				"preReqs": {
+					"or": ["skill_pickpocket", "skill_usingTheLandLvl2"]
+				}
+			},
+			{
+				"skill": "skill_disguise",
+				"preReqs": {
+					"or": ["skill_pickpocket", "skill_fastTalk"]
+				}
+			},
+			{
+				"skill": "skill_poisonDaggerUseLvl3",
+				"preReqs": {
+					"and": ["skill_poisonDaggerUseLvl2"]
+				}
+			},
+			{
+				"skill": "skill_daggerMastery2",
+				"preReqs": {
+					"and": ["skill_daggerMastery1"]
+				}
+			},
+			{
+				"skill": "skill_weaponCatching",
+				"preReqs": {
+					"or": ["skill_mainGaucheSwiftness", "skill_twinDefensiveSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_bowMastery2",
+				"preReqs": {
+					"and": ["skill_bowMastery1"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_whirlingDervish",
+				"preReqs": {
+					"or": ["skill_usingTheLandLvl3", "skill_guide"],
+					"and": ["skill_masterSurvivalist"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_escapeArtist",
+				"preReqs": {
+					"and": ["skill_nimbleLvl3", "skill_edificier"]
+				}
+			},
+			{
+				"skill": "skill_improvedBackstab",
+				"preReqs": {
+					"and": ["skill_hamstring"]
+				}
+			},
+			{
+				"skill": "skill_ambusher",
+				"preReqs": {
+					"and": ["skill_flanking"]
+				}
+			},
+			{
+				"skill": "skill_distraction",
+				"preReqs": {
+					"and": ["skill_fastTalk"]
+				}
+			},
+			{
+				"skill": "skill_oneWithYourDagger",
+				"preReqs": {
+					"and": ["skill_daggerMastery2"]
+				}
+			},
+			{
+				"skill": "skill_daggerTalent2",
+				"preReqs": {
+					"and": ["skill_daggerTalent1"]
+				}
+			},
+			{
+				"skill": "skill_twinDefensiveSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_weaponCatching"]
+				}
+			},
+			{
+				"skill": "skill_crackingShot",
+				"preReqs": {
+					"and": ["skill_bowMastery2"]
+				}
+			},
+			{
+				"skill": "skill_bowTalent2",
+				"preReqs": {
+					"and": ["skill_bowTalent1"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_agileSkirmisher",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl4"]
+				}
+			},
+			{
+				"skill": "skill_getaway",
+				"preReqs": {
+					"and": ["skill_improvedBackstab"]
+				}
+			},
+			{
+				"skill": "skill_aThousandFaces",
+				"preReqs": {
+					"and": ["skill_disguise"]
+				}
+			},
+			{
+				"skill": "skill_daggerSupremacy",
+				"preReqs": {
+					"and": ["skill_oneWithYourDagger", "skill_daggerTalent2"]
+				}
+			},
+			{
+				"skill": "skill_bowSupremacy",
+				"preReqs": {
+					"and": ["skill_crackingShot", "skill_bowTalent2"]
+				}
+			}
+		]
+	}
+}

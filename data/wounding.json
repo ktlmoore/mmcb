@@ -1,0 +1,28 @@
+{
+	"knack": "Examining a wound allows the mage to know what caused it.",
+	"spells": {
+		"level1": [
+			"skill_shareThePain",
+			"skill_scarOfTheSoul",
+			"skill_traceTheFlowOfLife"
+		],
+		"level2": [
+			"skill_scarOfTheHeart",
+			"skill_exciseTheTreacherousHeart",
+			"skill_visionOfMortality"
+		],
+		"level3": [
+			"skill_theftByScar",
+			"skill_scarTheUnquietSoul",
+			"skill_brandTheMemory"
+		],
+		"level4": [
+			"skill_cutTheThread",
+			"skill_scarAndUnblemish"
+		],
+		"level5": [
+			"skill_maelstromOfScarsRenewed",
+			"skill_stealTheScarredSoul"
+		]
+	}
+}

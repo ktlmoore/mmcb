@@ -1,0 +1,28 @@
+{
+	"knack": "Examining a broken object allows the mage determine how it was broken.",
+	"spells": {
+		"level1": [
+			"skill_faultsUnveiled",
+			"skill_faultOfLife",
+			"skill_faultOfFooting"
+		],
+		"level2": [
+			"skill_sappingSteel",
+			"skill_faultOfPower",
+			"skill_faultOfMemory"
+		],
+		"level3": [
+			"skill_faultOfEarth",
+			"skill_faultOfTemperance",
+			"skill_faultlines"
+		],
+		"level4": [
+			"skill_faultOfFocus",
+			"skill_faultOfSight"
+		],
+		"level5": [
+			"skill_faultOfExistence",
+			"skill_crackTheFabric"
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"knack": "The mage can identify any material by taste.",
+	"spells": {
+		"level1": [
+			"skill_purificationOfTheSelf",
+			"skill_efficientConsumption",
+			"skill_tongueOfNewt"
+		],
+		"level2": [
+			"skill_dissolutionOfTheForm",
+			"skill_acidicTransformation",
+			"skill_tasteOfKnowledge"
+		],
+		"level3": [
+			"skill_dragonsFire",
+			"skill_arthroidForm",
+			"skill_fortifiedConsumption"
+		],
+		"level4": [
+			"skill_infusion",
+			"skill_flameOfDissolution"
+		],
+		"level5": [
+			"skill_swarmOfConsumption",
+			"skill_consumeAndAssume"
+		]
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"combatPath_philosophicalMaster": {
+		"level1": ["skill_greaterForms"],
+		"level2": ["skill_situationalAwareness"],
+		"level3": ["skill_alertness"],
+		"level4": ["skill_ironWill"],
+		"level5": ["skill_transcendance"]
+	},
+	"combatPath_soldier": {
+		"level1": ["skill_tactics"],
+		"level2": ["skill_leaveNoManBehind"],
+		"level3": ["skill_smallUnitLeadership"],
+		"level4": ["skill_illHoldThemOff"],
+		"level5": ["skill_tacticalStrike"]
+	},
+	"combatPath_mercenary": {
+		"level1": ["skill_theRightPeople"],
+		"level2": ["skill_knowingHowToSellYourself"],
+		"level3": ["skill_itsAllBusiness"],
+		"level4": ["skill_escalation"],
+		"level5": ["skill_friendsInHighPlaces"]
+	},
+	"combatPath_dashingSwordsman": {
+		"level1": ["skill_signatureMove"],
+		"level2": ["skill_singleHandFocus", "skill_rollWithTheBlow"],
+		"level3": ["skill_poiseOfADancer"],
+		"level4": ["skill_allAgainstOne"],
+		"level5": ["skill_thePerfectDance"]
+	},
+	"combatPath_holyCrusader": {
+		"level1": ["skill_relationshipWithTheChurch"],
+		"level2": ["skill_indoctrinated"],
+		"level3": ["skill_blessedWeapon"],
+		"level4": ["skill_blessedWarrior"],
+		"level5": ["skill_holyCrusader"]
+	},
+	"combatPath_cloakWielder": {
+		"level1": ["skill_atHomeInTheShadows"],
+		"level2": ["skill_cloakAndDaggerMastery"],
+		"level3": ["skill_theArtOfObfuscation"],
+		"level4": ["skill_theAlreadyCompleteDeception"],
+		"level5": ["skill_becomeTheShadow"]
+	},
+	"combatPath_bodyGuard": {
+		"level1": ["skill_longTermDefender"],
+		"level2": ["skill_illBeYourOpponent"],
+		"level3": ["skill_principalDefence"],
+		"level4": ["skill_activeDefence"],
+		"level5": ["skill_impenetrableDefence"]
+	},
+	"combatPath_standardBearer": {
+		"level1": ["skill_standardBearer"],
+		"level2": ["skill_standardUse"],
+		"level3": ["skill_gauntletUse"],
+		"level4": ["skill_rally"],
+		"level5": ["skill_callToArms"]
+	},
+	"combatPath_hunter": {
+		"level1": ["skill_experiencedHunter"],
+		"level2": ["skill_maimingShot"],
+		"level3": ["skill_shotOnTheRun"],
+		"level4": ["skill_disablingShot"],
+		"level5": ["skill_ridiculousTrickShot"]
+	},
+	"combatPath_defenderOfTheWall": {
+		"level1": ["skill_fortifiedDefence"],
+		"level2": ["skill_perfectDefence"],
+		"level3": ["skill_entrenchedPosition"],
+		"level4": ["skill_repositioning"],
+		"level5": ["skill_noWallWithstand"]
+	},
+	"combatPath_primalWarrior": {
+		"level1": ["skill_warriorsAura"],
+		"level2": ["skill_powerfulArms"],
+		"level3": ["skill_bronzeSkin"],
+		"level4": ["skill_dieHard"],
+		"level5": ["skill_overwhelmingPower"]
+	}
+}

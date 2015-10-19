@@ -1,0 +1,370 @@
+{
+	"feature": "skillFocus",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_mixAlchemy",
+				"preReqs": {
+
+				}
+			},
+			{
+				"skill": "skill_medicalKnowledge",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_wellVersed",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_emergencyAid",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_wellTravelled",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_crafter1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_wealth",
+				"preReqs": {
+					
+				}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_mixPotionLvl2",
+				"preReqs": {
+					"and": ["skill_mixAlchemy"]
+				}
+			},
+			{
+				"skill": "skill_advancedMixing1",
+				"preReqs": {
+					"and": ["skill_mixAlchemy"]
+				}
+			},
+			{
+				"skill": "skill_patchUp",
+				"preReqs": {
+					"and": ["skill_emergencyAid"]
+				}
+			},
+			{
+				"skill": "skill_resuscitate",
+				"preReqs": {
+					"and": ["skill_emergencyAid"]
+				}
+			},
+			{
+				"skill": "skill_journeymanKnowledgeLvl2",
+				"preReqs": {
+					"and": ["skill_wellTravelled"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_crafter2",
+				"preReqs": {
+					"and": ["skill_crafter1"]
+				}
+			},
+			{
+				"skill": "skill_adjustmentLvl2",
+				"preReqs": {
+					"and": ["skill_crafter2"]
+				}
+			},
+			{
+				"skill": "skill_builder",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_contacts",
+				"preReqs": {
+					"and": ["skill_wealth"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_mixPotionLvl3",
+				"preReqs": {
+					"and": ["skill_mixPotionLvl2"]
+				}
+			},
+			{
+				"skill": "skill_advancedMixing2",
+				"preReqs": {
+					"and": ["skill_advancedMixing1"]
+				}
+			},
+			{
+				"skill": "skill_specialMedicineLvl3",
+				"preReqs": {
+					"and": ["skill_medicalKnowledge"]
+				}
+			},
+			{
+				"skill": "skill_advancedApplicationLvl3",
+				"preReqs": {
+					"and": ["skill_mixAlchemy", "skill_medicalKnowledge"]
+				}
+			},
+			{
+				"skill": "skill_concoction",
+				"preReqs": {
+					"and": ["skill_medicalKnowledge", "skill_extremelyWellVersed"]
+				}
+			},
+			{
+				"skill": "skill_extremelyWellVersed",
+				"preReqs": {
+					"and": ["skill_wellVersed"]
+				}
+			},
+			{
+				"skill": "skill_combatMaster",
+				"preReqs": {
+					"or": ["skill_patchUp", "skill_resuscitate"]
+				}
+			},
+			{
+				"skill": "skill_surgery",
+				"preReqs": {
+					"and": ["skill_resuscitate"]
+				}
+			},
+			{
+				"skill": "skill_journeymanKnowledgeLvl3",
+				"preReqs": {
+					"and": ["skill_journeymanKnowledgeLvl2"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_adjustmentLvl3",
+				"preReqs": {
+					"and": ["skill_adjustmentLvl2"]
+				}
+			},
+			{
+				"skill": "skill_crafter3",
+				"preReqs": {
+					"and": ["skill_crafter2"]
+				}
+			},
+			{
+				"skill": "skill_juryRig",
+				"preReqs": {
+					"and": ["skill_crafter3"]
+				}
+			},
+			{
+				"skill": "skill_operations",
+				"preReqs": {
+					"and": ["skill_wealth"]
+				}
+			},
+			{
+				"skill": "skill_connections2",
+				"preReqs": {
+					"and": "skill_contacts"
+				}
+			},
+			{
+				"skill": "skill_improvedUpgrades",
+				"preReqs": {
+					"and": ["skill_craftingUpgrades"]
+				}
+			},
+			{
+				"skill": "skill_improvedHealingHands",
+				"preReqs": {
+					"and": ["skill_medicineHealingHands"]
+				}
+			},
+			{
+				"skill": "skill_improvedInfused",
+				"preReqs": {
+					"and": ["skill_alchemyInfused"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_mixPotionLvl4",
+				"preReqs": {
+					"and": "skill_mixPotionLvl3"
+				}
+			},
+			{
+				"skill": "skill_advancedMixing3",
+				"preReqs": {
+					"and": ["skill_advancedMixing2"]
+				}
+			},
+			{
+				"skill": "skill_specialMedicineLvl4",
+				"preReqs": {
+					"and": ["skill_specialMedicineLvl3"]
+				}
+			},
+			{
+				"skill": "skill_advancedApplicationLvl4",
+				"preReqs": {
+					"and": ["skill_advancedApplicationLvl3"]
+				}
+			},
+			{
+				"skill": "skill_fastWork",
+				"preReqs": {
+					"and": ["skill_patchUp"]
+				}
+			},
+			{
+				"skill": "skill_patchUpMore",
+				"preReqs": {
+					"and": ["skill_patchUp"]
+				}
+			},
+			{
+				"skill": "skill_jackOfAllTrades",
+				"preReqs": {
+					"and": ["skill_journeymanKnowledgeLvl3"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_fittedArmour",
+				"preReqs": {
+					"and": ["skill_adjustmentLvl3", "skill_masterCrafter"]
+				}
+			},
+			{
+				"skill": "skill_masterCrafter",
+				"preReqs": {
+					"and": ["skill_crafter3"]
+				}
+			},
+			{
+				"skill": "skill_balancedWeapon",
+				"preReqs": {
+					"and": ["skill_adjustmentLvl3", "skill_masterCrafter"]
+				}
+			},
+			{
+				"skill": "skill_engineer",
+				"preReqs": {
+					"and": ["skill_builder", "skill_masterCrafter"]
+				}
+			},
+			{
+				"skill": "skill_ownWork",
+				"preReqs": {
+					"and": ["skill_crafter3"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_mixPotionLvl5",
+				"preReqs": {
+					"and": ["skill_mixPotionLvl4"]
+				}
+			},
+			{
+				"skill": "skill_masterOfBiology",
+				"preReqs": {
+					"and": ["skill_specialMedicineLvl4"]
+				}
+			},
+			{
+				"skill": "skill_alchemicalManipulation",
+				"preReqs": {
+					"and": ["skill_advancedApplicationLvl4", "skill_concoction"]
+				}
+			},
+			{
+				"skill": "skill_potency",
+				"preReqs": {
+					"and": ["skill_extremelyWellVersed"],
+					"or": ["skill_mixPotionLvl4", "skill_advancedMixing3"]
+				}
+			},
+			{
+				"skill": "skill_masterSurgeon",
+				"preReqs": {
+					"and": ["skill_surgery"]
+				}
+			},
+			{
+				"skill": "skill_perfectEnhancement",
+				"preReqs": {
+					"or": ["skill_fittedArmour", "skill_balanceWeapon"]
+				}
+			},
+			{
+				"skill": "skill_legendaryItem",
+				"preReqs": {
+					"and": ["skill_masterCrafter"]
+				}
+			}
+		]
+	}
+}

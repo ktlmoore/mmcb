@@ -1,0 +1,28 @@
+{
+	"knack": "The mage can read any written language that has not been magically encoded.",
+	"spells": {
+		"level1": [
+			"skill_mindsEye",
+			"skill_symbolOfCreating",
+			"skill_theClosedEye"
+		],
+		"level2": [
+			"skill_symbolOfWarding",
+			"skill_symbolOfSkybreak",
+			"skill_symbolOfStorms"
+		],
+		"level3": [
+			"skill_symbolOfKnowledge",
+			"skill_symbolOfProduction",
+			"skill_symbolOfEntrenchment"
+		],
+		"level4": [
+			"skill_symbolOfProtection",
+			"skill_symbolOfRemoval"
+		],
+		"level5": [
+			"skill_symbolOfBecoming",
+			"skill_symbolOfCalamity"
+		]
+	}
+}

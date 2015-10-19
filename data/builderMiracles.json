@@ -1,0 +1,9 @@
+{
+	"miracles": {
+		"level1": ["skill_rework", "skill_concussiveStrike"],
+		"level2": ["skill_make", "skill_cumbersomeTools", "skill_reinforce", "skill_buildersGaze"],
+		"level3": ["skill_reconstruction", "skill_armourskin", "skill_divineForging", "skill_bulwark"],
+		"level4": ["skill_aPoorWorkman", "skill_creation", "skill_imprison"],
+		"level5": ["skill_steelskin", "skill_reforgedSteel"]
+	}
+}

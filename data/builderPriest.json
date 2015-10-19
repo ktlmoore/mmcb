@@ -1,0 +1,231 @@
+{
+	"feature": "skill_divineAuraBuilder",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_craftsman1",
+				"preReqs": {
+
+				}
+			},
+			{
+				"skill": "skill_useMaceHammer",
+				"preReqs": {
+							
+				}
+			},
+			{
+				"skill": "skill_mediumArmourUse",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_heavyArmourUse",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_divineFavour1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_congregation",
+				"preReqs": {
+					
+				}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_craftsman2",
+				"preReqs": {
+					"and": ["skill_craftsman1"]
+				}
+			},
+			{
+				"skill": "skill_builder",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_maceHammerTalent1",
+				"preReqs": {
+					"and": ["skill_useMaceHammer"]
+				}
+			},
+			{
+				"skill": "skill_maceHammerPotency",
+				"preReqs": {
+					"and": ["skill_maceHammerTalent1"]
+				}
+			},
+			{
+				"skill": "skill_maceHammerFinesse",
+				"preReqs": {
+					"and": ["skill_maceHammerTalent1"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourRepair",
+				"preReqs": {
+					"and": ["skill_mediumArmourUse"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourTraining2",
+				"preReqs": {
+					"and": ["skill_heavyArmourUse"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_touchOfDivinity",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_improvedDivineAura",
+				"preReqs": {
+					"and": ["skill_divineFavour1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_divineInspiration",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_craftsman3",
+				"preReqs": {
+					"and": ["skill_craftsman2"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourTrainingLvl3",
+				"preReqs": {
+					"and": ["skill_mediumArmourRepair"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourRepair",
+				"preReqs": {
+					"and": ["skill_heavyArmourTraining2"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_blessedRegeneration",
+				"preReqs": {
+					"and": ["skill_toughLvl2", "skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour2",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_churchBacking",
+				"preReqs": {
+					"and": ["skill_congregation", "skill_improvedDivineAura"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_masterCraftsman",
+				"preReqs": {
+					"and": ["skill_craftsman3"]
+				}
+			},
+			{
+				"skill": "skill_engineer",
+				"preReqs": {
+					"and": ["skill_craftsman3", "skill_builder"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_miracle",
+				"preReqs": {
+					"and": ["skill_touchOfDivinity", "skill_divineMajestyBuilder"]
+				}
+			},
+			{
+				"skill": "skill_divineMajestyBuilder",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour3",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_holyFervour",
+				"preReqs": {
+					"and": ["skill_toughLvl4", "skill_divineMajestyBuilder", "skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_intercession",
+				"preReqs": {
+					"and": ["skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_hierarch",
+				"preReqs": {
+					"and": ["skill_divineFavour3", "skill_churchBacking"]
+				}
+			}
+		]
+	}
+}

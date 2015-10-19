@@ -1,0 +1,377 @@
+{
+	"feature": "skill_determination",
+	"skills": {
+		"level1" : [
+			{
+				"skill": "skill_burly",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_bucklerUse",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_mediumShieldUse",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_largeShieldUse",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_affiliation",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_mediumArmourUse",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_heavyArmourUse",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_useWeapon",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_ambidextrous",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_twinDefensiveSwiftnessLvl1",
+				"preReqs": {}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_battleRage",
+				"preReqs": {
+					"and": ["skill_burly"]
+				}
+			},
+			{
+				"skill": "skill_strengthOfArms",
+				"preReqs": {
+					"and": ["skill_burly"]
+				}
+			},
+			{
+				"skill": "skill_shieldSwiftness",
+				"preReqs": {
+					"or": ["skill_bucklerUse", "skill_mediumShieldUse"]
+				}
+			},
+			{
+				"skill": "skill_solidDefence",
+				"preReqs": {
+					"and": ["skill_largeShieldUse"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_reputed",
+				"preReqs": {
+					"and": ["skill_affiliation"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourRepair",
+				"preReqs": {
+					"and": ["skill_mediumArmourUse"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourTrainingLvl2",
+				"preReqs": {
+					"and": ["skill_mediumArmourUse"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourTraining2",
+				"preReqs": {
+					"and": ["skill_heavyArmourUse"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_weaponTalent1",
+				"preReqs": {
+					"and": ["skill_useWeapon"]
+				}
+			},
+			{
+				"skill": "skill_weaponPotency",
+				"preReqs": {
+					"and": ["skill_weaponTalent1"]
+				}
+			},
+			{
+				"skill": "skill_improvisedWeapon",
+				"preReqs": {
+					"and": ["skill_weaponPotency"]
+				}
+			},
+			{
+				"skill": "skill_weaponFinesse",
+				"preReqs": {
+					"and": ["skill_weaponTalent1"]
+				}
+			},
+			{
+				"skill": "skill_weaponCatching",
+				"preReqs": {
+					"or": ["skill_ambidextrous", "skill_twinDefensiveSwiftnessLvl1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_mighty",
+				"preReqs": {
+					"and": ["skill_burly"]
+				}
+			},
+			{
+				"skill": "skill_fearsomeRenown",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_dampenBlow",
+				"preReqs": {
+					"or": ["skill_shieldSwiftness", "skill_solidDefence"]
+				}
+			},
+			{
+				"skill": "skill_improvedDetermination",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourTrainingLvl3",
+				"preReqs": {
+					"or": ["skill_mediumArmourRepair", "skill_mediumArmourTrainingLvl2"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourRepair",
+				"preReqs": {
+					"and": ["skill_heavyArmourTraining2"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourTraining3",
+				"preReqs": {
+					"and": ["skill_heavyArmourTraining2"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl3",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_twoHandedBlock",
+				"preReqs": {
+					"and": ["skill_weaponTalent1"]
+				}
+			},
+			{
+				"skill": "skill_singleHandFocus",
+				"preReqs": {
+					"and": ["skill_weaponTalent1"]
+				}
+			},
+			{
+				"skill": "skill_oneWithYourWeapon",
+				"preReqs": {
+					"and": ["skill_weaponFinesse"]
+				}
+			},
+			{
+				"skill": "skill_weaponTalent2",
+				"preReqs": {
+					"and": ["skill_weaponTalent1"]
+				}
+			},
+			{
+				"skill": "skill_twinDefensiveSwiftnessLvl3",
+				"preReqs": {
+					"and": ["skill_weaponCatching"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_bloodstainedHero",
+				"preReqs": {
+					"and": ["skill_battleRage"]
+				}
+			},
+			{
+				"skill": "skill_fearsomeVisage",
+				"preReqs": {
+					"and": ["skill_fearsomeRenown"]
+				}
+			},
+			{
+				"skill": "skill_disarmBlow",
+				"preReqs": {
+					"and": ["skill_shieldSwiftness"]
+				}
+			},
+			{
+				"skill": "skill_deflectBlow",
+				"preReqs": {
+					"and": ["skill_solidDefence"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"or": ["skill_lightArmour1Lvl3", "skill_twinDefensiveSwiftnessLvl3", "skill_singleHandFocus"]
+				}
+			},
+			{
+				"skill": "skill_champion",
+				"preReqs": {
+					"and": ["skill_reputed"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourSwiftness",
+				"preReqs": {
+					"and": ["skill_mediumArmourTrainingLvl3"]
+				}
+			},
+			{
+				"skill": "skill_heavyArmourTraining4",
+				"preReqs": {
+					"or": ["skill_heavyArmourTraining3", "skill_heavyArmourRepair"]
+				}
+			},
+			{
+				"skill": "skill_absurdlyTough",
+				"preReqs": {
+					"and": ["skill_toughLvl3"]
+				}
+			},
+			{
+				"skill": "skill_highPainThreshold",
+				"preReqs": {
+					"and": ["skill_toughLvl3"]
+				}
+			},
+			{
+				"skill": "skill_ironDefence",
+				"preReqs": {
+					"and": ["skill_twoHandedBlock"]
+				}
+			},
+			{
+				"skill": "skill_singleHandPerfectDefence",
+				"preReqs": {
+					"and": ["skill_singleHandFocus"]
+				}
+			},
+			{
+				"skill": "skill_weaponSupremacy",
+				"preReqs": {
+					"and": ["skill_oneWithYourWeapon", "skill_weaponTalent2"]
+				}
+			},
+			{
+				"skill": "skill_twinBladeRend",
+				"preReqs": {
+					"and": ["skill_weaponTalent2", "skill_twinDefensiveSwiftnessLvl3"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_beyondMortalStrength",
+				"preReqs": {
+					"and": ["skill_mighty"]
+				}
+			},
+			{
+				"skill": "skill_reflectBlow",
+				"preReqs": {
+					"and": ["skill_reflectBlow"]
+				}
+			},
+			{
+				"skill": "skill_holdTheLine",
+				"preReqs": {
+					"and": ["skill_deflectBlow"]
+				}
+			},
+			{
+				"skill": "skill_agileFighter",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl4"]
+				}
+			},
+			{
+				"skill": "skill_mediumArmourTrainingLvl5",
+				"preReqs": {
+					"and": ["skill_mediumArmourSwiftness"]
+				}
+			},
+			{
+				"skill": "skill_bulwarkedDefence",
+				"preReqs": {
+					"and": ["skill_heavyArmourTraining4"]
+				}
+			},
+			{
+				"skill": "skill_ironBody",
+				"preReqs": {
+					"and": ["skill_absurdlyTough"]
+				}
+			},
+			{
+				"skill": "skill_reapingBlow",
+				"preReqs": {
+					"and": ["skill_ironDefence"]
+				}
+			},
+			{
+				"skill": "skill_arrowCatching",
+				"preReqs": {
+					"and": ["skill_singleHandPerfectDefence", "skill_oneWithYourWeapon"]
+				}
+			},
+			{
+				"skill": "skill_weaponTranscendence",
+				"preReqs": {
+					"or": ["skill_ironDefence", "skill_singleHandPerfectDefence", "skill_weaponSupremacy", "skill_twinBladeRend", "skill_lightArmourSwiftnessLvl4", "skill_disarmBlow", "skill_deflectBlow"]
+				}
+			}
+		]
+	}
+}

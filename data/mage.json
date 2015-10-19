@@ -1,0 +1,213 @@
+{
+	"feature": "spellcasting",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_useQuarterstaff",
+				"preReqs": {
+
+				}
+			},
+			{
+				"skill": "skill_useImplement",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_manaSense",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_protomanaTolerance1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_scholar",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {
+					
+				}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_manaSimulation",
+				"preReqs": {
+					"and": ["skill_useImplement"]
+				}
+			},
+			{
+				"skill": "skill_distillMana",
+				"preReqs": {
+					"and": ["skill_manaSense"]
+				}
+			},
+			{
+				"skill": "skill_enchantWeapon",
+				"preReqs": {
+					"and": ["skill_manaSense"]
+				}
+			},
+			{
+				"skill": "skill_minorRitualCaster",
+				"preReqs": {
+					"and": ["skill_manaSense"]
+				}
+			},
+			{
+				"skill": "skill_arcaneLearnings",
+				"preReqs": {
+					"and": ["skill_minorRitualCaster"]
+				}
+			},
+			{
+				"skill": "skill_protomanaTolerance2",
+				"preReqs": {
+					"and": ["skill_protomanaTolerance1"]
+				}
+			},
+			{
+				"skill": "skill_collegeContacts",
+				"preReqs": {
+					"and": ["skill_scholar"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_retrieveImplement",
+				"preReqs": {
+					"and": ["skill_useImplement"]
+				}
+			},
+			{
+				"skill": "skill_implementExperience",
+				"preReqs": {
+					"and": ["skill_manaSimulation", "skill_distillMana"]
+				}
+			},
+			{
+				"skill": "skill_manaAbsorption",
+				"preReqs": {
+					"and": ["skill_enchantWeapon"]
+				}
+			},
+			{
+				"skill": "skill_ritualCaster",
+				"preReqs": {
+					"and": ["skill_minorRitualCasting"]
+				}
+			},
+			{
+				"skill": "skill_protomanaTolerance3",
+				"preReqs": {
+					"and": ["skill_protomanaTolerance2"]
+				}
+			},
+			{
+				"skill": "skill_collegeRequisitions",
+				"preReqs": {
+					"and": ["skill_collegeContacts"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl3",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_riteFocussedImplement",
+				"preReqs": {
+					"and": ["skill_implementExperience"]
+				}
+			},
+			{
+				"skill": "skill_advancedManaDistillation",
+				"preReqs": {
+					"and": ["skill_distillMana"]
+				}
+			},
+			{
+				"skill": "skill_enchantArmour",
+				"preReqs": {
+					"and": ["skill_manaAbsorption"]
+				}
+			},
+			{
+				"skill": "skill_loremaster",
+				"preReqs": {
+					"and": ["skill_ritualCaster", "skill_arcaneLearnings"]
+				}
+			},
+			{
+				"skill": "skill_collegeProfessor",
+				"preReqs": {
+					"and": ["skill_collegeRequisitions"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl3"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_dragonsoulImplement",
+				"preReqs": {
+					"and": ["skill_retrieveImplement", "skill_implementExperience"]
+				}
+			},
+			{
+				"skill": "skill_masterRitualist",
+				"preReqs": {
+					"and": ["skill_ritualCaster"]
+				}
+			},
+			{
+				"skill": "skill_protomanaTolerance4",
+				"preReqs": {
+					"and": ["skill_protomanaTolerance3"]
+				}
+			}
+		]
+	}
+}

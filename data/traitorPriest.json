@@ -1,0 +1,207 @@
+{
+	"feature": "skill_divineAuraTraitor",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_diplomacy",
+				"preReqs": {
+
+				}
+			},
+			{
+				"skill": "skill_larceny",
+				"preReqs": {
+							
+				}
+			},
+			{
+				"skill": "skill_useDagger",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_divineFavour1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_congregation",
+				"preReqs": {
+					
+				}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_fastTalk",
+				"preReqs": {
+					"and": ["skill_diplomacy"]
+				}
+			},
+			{
+				"skill": "skill_backstab",
+				"preReqs": {
+					"and": ["skill_larceny"]
+				}
+			},
+			{
+				"skill": "skill_pickpocket",
+				"preReqs": {
+					"and": ["skill_larceny"]
+				}
+			},
+			{
+				"skill": "skill_traitorsCloak",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_daggerMastery1",
+				"preReqs": {
+					"and": ["skill_useDagger"]
+				}
+			},
+			{
+				"skill": "skill_daggerTalent1",
+				"preReqs": {
+					"and": ["skill_daggerMastery1"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_touchOfDivinity",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_improvedDivineAura",
+				"preReqs": {
+					"and": ["skill_divineFavour1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_disguise",
+				"preReqs": {
+					"or": ["skill_fastTalk", "skill_pickpocket"]
+				}
+			},
+			{
+				"skill": "skill_daggerMastery2",
+				"preReqs": {
+					"and": ["skill_daggerMastery1"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_blessedRegeneration",
+				"preReqs": {
+					"and": ["skill_toughLvl2", "skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour2",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_churchBacking",
+				"preReqs": {
+					"and": ["skill_congregation", "skill_improvedDivineAura"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_distraction",
+				"preReqs": {
+					"and": ["skill_fastTalk"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_miracle",
+				"preReqs": {
+					"and": ["skill_touchOfDivinity", "skill_divineMajestyTraitor"]
+				}
+			},
+			{
+				"skill": "skill_divineMajestyTraitor",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour3",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_holyFervour",
+				"preReqs": {
+					"and": ["skill_toughLvl4", "skill_divineMajestyTraitor", "skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_intercession",
+				"preReqs": {
+					"and": ["skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_hierarch",
+				"preReqs": {
+					"and": ["skill_divineFavour3", "skill_churchBacking"]
+				}
+			}
+		]
+	}
+}

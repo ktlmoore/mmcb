@@ -1,0 +1,49 @@
+{
+	"god_traitor": {
+		"id": "god_traitor",
+		"name": "The Traitor",
+		"nation": "Acryn",
+		"image": "traitor.png",
+		"priestClass": "traitorPriest",
+		"founder": true
+	},
+	"god_leader": {
+		"id": "god_leader",
+		"name": "The Leader",
+		"nation": "Acryn",
+		"image": "theLeader.png",
+		"priestClass": "leaderPriest",
+		"founder": true
+	},
+	"god_builder": {
+		"id": "god_builder",
+		"name": "The Builder",
+		"nation": "Acryn",
+		"image": "theBuilder.png",
+		"priestClass": "builderPriest",
+		"founder": true
+	},
+	"god_tender": {
+		"id": "god_tender",
+		"name": "The Tender",
+		"nation": "Acryn",
+		"image": "theTender.png",
+		"priestClass": "tenderPriest",
+		"founder": true
+	},
+	"god_warrior": {
+		"id": "god_warrior",
+		"name": "The Warrior",
+		"nation": "Acryn",
+		"image": "theWarrior.png",
+		"priestClass": "warriorPriest",
+		"founder": true
+	},
+	"god_splinteredMan": {
+		"id": "god_splinteredMan",
+		"name": "The Splintered Man",
+		"nation": "Acryn",
+		"image": "splinteredMan.png",
+		"priestClass": "priest"
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"class_fighter": {
+		"id": "class_fighter",
+		"name": "Fighter",
+		"description": "Front-line combatants capable of making expert use of weaponry and armour, and absorbing large amounts of punishment.",
+		"image": "warrior.png"
+	},
+	"class_skirmisher": {
+		"id": "class_skirmisher",
+		"name": "Skirmisher",
+		"description": "Agile combatants making use of bows and daggers to harry their opponents with surprise attacks.",
+		"image": "skirmisher.png"
+	},
+	"class_mage": {
+		"id": "class_mage",
+		"name": "Mage",
+		"description": "Capable of using into one of five magical rites to call forth arcane power to overcome the challenges that face them.",
+		"image": "mage.png"
+	},
+	"class_priest": {
+		"id": "class_priest",
+		"name": "Priest",
+		"description": "Clerics capable of calling down divine favour to empower them in battle and work miracles.",
+		"image": "priest.png"
+	},
+	"class_wayfinder": {
+		"id": "class_wayfinder",
+		"name": "Wayfinder",
+		"description": "Individuals capable of navigating the Flux's twisted geography, and reshaping it through the strength of their will.",
+		"image": "wayfinder.png"
+	},
+	"class_journeyman": {
+		"id": "class_journeyman",
+		"name": "Journeyman",
+		"description": "Masters of crafting, medicine, alchemy and scholarly pursuits, providing the expertise and equipment needed to render any problem solvable.",
+		"image": "journeyman.png"
+	},
+	"class_leaderPriest": {
+		"id": "class_leaderPriest",
+		"name": "Leader Priest",
+		"description": "Leader Priests like to lead people around",
+		"image": "leaderPriest.png"
+	},
+	"class_tenderPriest": {
+		"id": "class_tenderPriest",
+		"name": "Tender Priest",
+		"description": "Tender Priests are the closest we have to medics",
+		"image": "tenderPriest.png"
+	},
+	"class_builderPriest": {
+		"id": "class_builderPriest",
+		"name": "Builder Priest",
+		"description": "Builder Priests build things",
+		"image": "builderPriest.png"
+	},
+	"class_warriorPriest": {
+		"id": "class_warriorPriest",
+		"name": "Warrior Priest",
+		"description": "Warrior Priests like to hit things",
+		"image": "warriorPriest.png"
+	},
+	"class_traitorPriest": {
+		"id": "class_traitorPriest",
+		"name": "Traitor Priest",
+		"description": "Traitor Priests are BAMFs",
+		"image": "traitorPriest.png"
+	}
+}

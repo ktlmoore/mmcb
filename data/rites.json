@@ -1,0 +1,22 @@
+{
+	"rite_binding": {
+		"id": "rite_binding",
+		"name": "Binding"
+	},
+	"rite_fracturing": {
+		"id": "rite_fracturing",
+		"name": "Fracturing"
+	},
+	"rite_wounding": {
+		"id": "rite_wounding",
+		"name": "Wounding"
+	},
+	"rite_consumption": {
+		"id": "rite_consumption",
+		"name": "Consumption"
+	},
+	"rite_scribing": {
+		"id": "rite_scribing",
+		"name": "Scribing"
+	}
+}

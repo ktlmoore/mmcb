@@ -1,0 +1,28 @@
+{
+	"knack": "The mage can slip out of any mundane bond.",
+	"spells": {
+		"level1": [
+			"skill_perfectBinding",
+			"skill_bindItem",
+			"skill_bindWound"
+		],
+		"level2": [
+			"skill_bindTheWind",
+			"skill_boundInService",
+			"skill_bindLimb"
+		],
+		"level3": [
+			"skill_bindTheTreacherousHeart",
+			"skill_bindTheStrength",
+			"skill_bindTheBattle"
+		],
+		"level4": [
+			"skill_mastersPunishment",
+			"skill_holdBackTheFlowOfLife"
+		],
+		"level5": [
+			"skill_puppetteer",
+			"skill_boundToTheCause"
+		]
+	}
+}

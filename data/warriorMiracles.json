@@ -1,0 +1,9 @@
+{
+	"miracles": {
+		"level1": ["skill_mightyBlow", "skill_warriorsStamina"],
+		"level2": ["skill_strikeTrue", "skill_neverUnarmed", "skill_faceMeBeast", "skill_mastersSweep"],
+		"level3": ["skill_unyieldingMight", "skill_bruteStrength", "skill_unbowedUnbroken", "skill_improvedMightyBlow"],
+		"level4": ["skill_blazingBlade", "skill_reapingSwing", "skill_getBehindMe"],
+		"level5": ["skill_titanOfBattle", "skill_warriorsMightySweep"]
+	}
+}

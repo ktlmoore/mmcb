@@ -1,0 +1,9 @@
+{
+	"miracles": {
+		"level1": ["skill_alwaysTheCorrectPath", "skill_weakPoint", "skill_gloveOfThePoisoner"],
+		"level2": ["skill_playingDead", "skill_deedsByCandlelight"],
+		"level3": ["skill_helpingHand", "skill_sightUnseen", "skill_barricadeUnbarred"],
+		"level4": ["skill_hardened", "skill_thisIsNotHowItEnds"],
+		"level5": ["skill_forThoseGreaterThanI", "skill_betweenBlinks", "skill_swanSong"]
+	}
+}

@@ -1,0 +1,221 @@
+{
+	"feature": "skill_wayfinding",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_guildMembership",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_inertialBarrier",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_findThePath",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_lashOut",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_knowTheFluxsTouch",
+				"preReqs": {}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_fluxShapingItems",
+				"preReqs": {
+					"and": ["skill_knowTheFluxsTouch"]
+				}
+			},
+			{
+				"skill": "skill_chooseThePath",
+				"preReqs": {}
+			},
+			{
+				"skill": "skill_concealedArts",
+				"preReqs": {
+					"and": ["skill_lashOut"]
+				}
+			},
+			{
+				"skill": "skill_patchTheCracks",
+				"preReqs": {
+					"and": ["skill_inertialBarrier"]
+				}
+			},
+			{
+				"skill": "skill_repairTheForm",
+				"preReqs": {
+					"and": ["skill_inertialBarrier"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_solidReputation",
+				"preReqs": {
+					"and": ["skill_guildMembership"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_fluxShapingLandscaping",
+				"preReqs": {
+					"and": ["skill_fluxShapingItems"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl3",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_guildBacking",
+				"preReqs": {
+					"and": ["skill_solidReputation"]
+				}
+			},
+			{
+				"skill": "skill_repairingInertialBarrier",
+				"preReqs": {
+					"and": ["skill_repairTheForm"]
+				}
+			},
+			{
+				"skill": "skill_restoreTheForm",
+				"preReqs": {
+					"and": ["skill_repairingInertialBarrier"]
+				}
+			},
+			{
+				"skill": "skill_durableInertialBarrier",
+				"preReqs": {
+					"and": ["skill_repairTheForm"]
+				}
+			},
+			{
+				"skill": "skill_concussiveBolt",
+				"preReqs": {
+					"and": ["skill_lashOut"]
+				}
+			},
+			{
+				"skill": "skill_healTheFluxFlesh",
+				"preReqs": {
+					"and": ["skill_knowTheFluxsTouch", "skill_repairTheForm"]
+				}
+			},
+			{
+				"skill": "skill_shakeRealitysFetters",
+				"preReqs": {
+					"and": ["skill_chooseThePath"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_fluxShapingWorldshaping",
+				"preReqs": {
+					"and": ["skill_fluxShapingLandscaping"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl3"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_guildCouncillor",
+				"preReqs": {
+					"and": ["skill_guildBacking"]
+				}
+			},
+			{
+				"skill": "skill_fluxSummoning",
+				"preReqs": {
+					"and": ["skill_restoreTheForm"]
+				}
+			},
+			{
+				"skill": "skill_resilientInertialBarrier",
+				"preReqs": {
+					"and": ["skill_durableInertialBarrier"]
+				}
+			},
+			{
+				"skill": "skill_airbladeShaping",
+				"preReqs": {
+					"and": ["skill_concussiveBolt"]
+				}
+			},
+			{
+				"skill": "skill_tearTheFluxFlesh",
+				"preReqs": {
+					"and": ["skill_concussiveBolt", "skill_healTheFluxFlesh"]
+				}
+			},
+			{
+				"skill": "skill_destabilisation",
+				"preReqs": {
+					"and": ["skill_shakeRealitysFetters"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_restoringInertialBarrier",
+				"preReqs": {
+					"and": ["skill_repairingInertialBarrier"]
+				}
+			},
+			{
+				"skill": "skill_annihilationOfForm",
+				"preReqs": {
+					"and": ["skill_airbladeShaping", "skill_tearTheFluxFlesh"]
+				}
+			},
+			{
+				"skill": "skill_permanentStabilisation",
+				"preReqs": {
+					"and": ["skill_destabilisation"]
+				}
+			},
+			{
+				"skill": "skill_fluxResurrection",
+				"preReqs": {
+					"or": ["skill_fluxSummoning", "skill_permanentStabilisation"]
+				}
+			}
+		]
+	}
+}

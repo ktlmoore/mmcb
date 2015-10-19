@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="./js/boostrap.min.js"></script>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/mmcb.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <title>Memento Mundi Character Builder</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Memento Mundi Character Builder</h1>
+      </div>
+      <!-- CHOOSE CLASS -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>Choose a Class: <span id="className"></span></strong>
+        </div>  
+        <div id="chooseClass" class="panel-body">
+          <p>
+            Each character is a member of one of six classes. This defines the area in which your character is most expert, and grants access to abilities that no other class will have. Each class has access to a series of skill trees from which they can select abilities.
+          </p>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <select class="form-control" id="classSelectBox">
+                    <option selected="true" disabled="true">Select one</option>
+                    <!-- Options filled in by JS -->
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <p id="classDescription"><!-- Class description filled in by JS --></p>
+                </div>
+                <div class="col-md-2">
+                  <p id="classImage">
+                  <!-- Image filled in by JS -->
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p id="godImage">
+                  <!-- Image filled in by JS -->
+                  </p>
+                </div>
+              </div>
+              <div class="row" id="combatPathSelect">
+                <div class="col-md-3">
+                  <select class="form-control" id="combatPathSelectBox">
+                    <option disabled=true selected=true>Choose Combat Path</option>
+                    <option value="combatPath_philosophicalMaster">Philosophical Master</option>
+                    <option value="combatPath_soldier">Soldier</option>
+                    <option value="combatPath_mercenary">Mercenary</option>
+                    <option value="combatPath_dashingSwordsman">Dashing Swordsman</option>
+                    <option value="combatPath_holyCrusader">Holy Crusader</option>
+                    <option value="combatPath_cloakWielder">Cloak Wielder</option>
+                    <option value="combatPath_bodyGuard">Body Guard</option>
+                    <option value="combatPath_standardBearer">Standard Bearer</option>
+                    <option value="combatPath_hunter">Hunter</option>
+                    <option value="combatPath_defenderOfTheWall">Defender of the Wall</option>
+                    <option value="combatPath_primalWarrior">Primal Warrior</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row" id="journeymanSkillFocusSelect">
+                <div class="col-md-3">
+                  <select class="form-control" id="journeymanSkillFocusSelectBox">
+                    <option disabled=true selected=true>Choose Skill Focus</option>
+                    <option value="crafting">Crafting - Upgrades</option>
+                    <option value="medicine">Medicine - Healing Hands</option>
+                    <option value="alchemy">Alchemy - Infused</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row" id="mageRitesSelect">
+                <div class="col-md-3">
+                  <div id="sameRiteWarning" class="panel panel-danger panel-heading">You cannot select the same Rite for both Primary and Secondary rites.</div>
+                  <select class="form-control" id="primaryRiteSelectBox">
+                    <!-- Options filled in by JS -->
+                  </select>
+                  <br>
+                  <select class="form-control" id="secondaryRiteSelectBox">
+                    <!-- Options filled in by JS -->
+                  </select>
+                </div>
+              </div>
+              <div class="row" id="priestTypeSelect">
+                <div class="col-md-3">
+                  <select class="form-control" id="priestTypeSelectBox">
+                    <!-- Options filled in by JS -->
+                  </select>
+                </div>
+                <!--<div class="col-md-2">
+                  <input type="button" class="btn-primary form-control" id="toggleAllGods" value="Show all gods" onclick="toggleAllGods()">
+                </div>-->
+                <div class="col-md-4" id="traitorPretenceSelect">
+                  <select class="form-control" id="traitorPretenceSelectBox">
+                    <option disabled=true selected=true>Pick a god to pretend to worship</option>
+                    <option value="leader">The Leader</option>
+                    <option value="warrior">The Warrior</option>
+                    <option value="builder">The Builder</option>
+                    <option value="tender">The Tender</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- END CHOOSE CLASS -->
+      <!-- BEGIN CHOOSE BACKGROUNDS -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>Choose Backgrounds: <span id="backgroundsChosen"></span></strong>
+        </div>
+        <div id="chooseBackgrounds" class="panel-body">
+          <p>
+            Every character had a life before they were an adventurer, and the experience and contacts gained during it may grant access to skills most members of the character's class do not possess. To represent this, select 2 small skill trees from the list provided on the background documents, and add all skills on them to the portfolio from which your character may pick. Then, come up with an IC explanation of what your character did before they were an adventurer, based on the two skill sets you have chosen.
+          </p>
+          <p>
+            The background system is designed to allow you to customise your character and fill in gaps in their capabilities. Want to play a Mage who gets stuck in on the front line when the going gets tough? Purchase a background that grants you a weapon or shield skill. Want to play a Fighter skilled at combat medicine or alchemy? Backgrounds provide access to these skills. 
+          </p>
+          <div class="panel panel-default panel-body" id="chooseBackground1">
+            <div class="row">
+              <div class="col-md-3">
+                <select class="form-control" id="background1SelectBox">
+                  <option selected="true" disabled="true">Select Background 1</option>
+                  <!-- Options to be filled in by JS -->
+                </select>
+              </div>
+              <div class="col-md-8">
+                <p id="background1Text">
+                  <!-- Description and levels filled in by JS -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default panel-body" id="chooseBackground2">  
+            <div class="row">
+              <div class="col-md-3">
+                <select class="form-control" id="background2SelectBox">
+                  <option selected="true" disabled="true">Select Background 2</option>
+                  <!-- Options to be filled in by JS -->
+                </select>
+              </div>
+              <div class="col-md-8">
+                <p id="background2Text">
+                  <!-- Description and levels filled in by JS -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CHOOSE BACKGROUNDS -->
+      <!-- BEGIN CHOOSE SKILLS -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>Choose Skills: <span id="pointsSpent">0/7</span> points spent</strong>
+        </div>
+        <div id="chooseSkills" class="panel-body">
+          <div class="row">
+            <div class="col-md-1">
+              <input type="button" class="btn-primary form-control" id="addXP" value="+XP" onclick="incXP()">
+            </div>
+            <div class="col-md-1">
+              <input type="button" class="btn-primary form-control" id="remXP" value="-XP" onclick="remXP()" disabled>
+            </div>
+          </div>
+          <br>
+          <div class="panel panel-danger panel-heading" id="noXPLeftWarning"><strong>You cannot buy that skill: you have run out of XP to spend</strong></div>
+          <div class="row">
+            <div class="col-md-3" id="lvl1SkillDiv"><strong>Level 1</strong><br><br>Choose a class and backgrounds to see available skills.</div>
+            <div class="col-md-3" id="lvl2SkillDiv"><strong>Level 2</strong><br><br></div>
+            <div class="col-md-3" id="lvl3SkillDiv"><strong>Level 3</strong><br><br></div>
+            <div class="col-md-3" id="lvl4SkillDiv"><strong>Level 4</strong><br><br></div>
+            <div class="col-md-3" id="lvl5SkillDiv"><strong>Level 5</strong><br><br></div>
+            <div class="col-md-9" id="skillDescription"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END CHOOSE SKILLS -->
+      <!-- BEGIN CHARACTER DETAILS -->
+      <div class="panel panel-default" id="characterDetailsPanel">
+        <div class="panel panel-heading">
+          <strong>Character Details</strong>
+        </div>
+        <div class="panel panel-body">
+          <div class="row">
+            <div class="col-md-8">
+              Fill in other details about your character here.
+            </div> 
+          </div> 
+          <br>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="charName">Character Name:</label>
+                <input type="text" class="form-control" id="charName"/><br>
+                <label for="playerName">Player Name:</label>
+                <input type="text" class="form-control" id="playerName"/><br>
+                <label for="bio">Character Bio:</label>
+                <textarea class="form-control" rows=10 id="bio"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CHARACTER DETAILS -->
+      <!-- BEGIN PRINT CHARACTER -->
+      <div class="panel panel-default" id="buildCharacter">
+        <div class="panel panel-heading">
+          <strong>Your character</strong>
+        </div>
+        <div class="panel panel-body">
+          <div class="row">
+            <div class="col-md-3">
+              <input type="button" class="btn btn-warning" id="buildCharacterBtn" value="Build Character" onclick="buildCharacter()"/>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-8" id="characterDiv"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        The Character Builder and its design are (C) Tom Lear 2015.  The styling is Bootstrap.  The content of the builder is (C) Oxford University RPGSoc 2012-15 and the work for inputting it into the Character Builder is thanks to Stephanie Edwards, Cameron Alsop and Tom Lear.<br><br>
+      </div>
+    </div>
+  </body>
+</html>

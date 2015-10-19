@@ -1,0 +1,226 @@
+[
+	{
+		"id": "bg_nobility",
+		"name": "Nobility/Merchant",
+		"description": "The Nobility and Merchants of Acryn share a number of similarities, they both have immense wealth and connections, although the source of their wealth varies. The nobility have built up their wealth for centuries, and will usually have connections with old groups who have shared in their families fortunes. Merchants will tend to have made most of their money themselves and have contacts with primarily mercantile groups. Of course nothing holds perfectly true, and the figure of a noble whose house has been essentially lost before the revolution and who now rebuilds their house with a merchant enterprise has become a recognisable sight within the city. ",
+		"level1": [
+			"skill_wealth"
+		],
+		"level2": [
+			"skill_connections2"
+		],
+		"level3": [
+			"skill_estates",
+			"skill_connections3"
+		]
+	},
+	{
+		"id": "bg_veryTough",
+		"name": "Very Tough",
+		"description": "You are really very quite tough.",
+		"level1": [
+			"skill_toughLvl1"
+		],
+		"level2": [
+			"skill_toughLvl2"
+		],
+		"level3": [
+			"skill_toughLvl3"
+		]
+	},
+	{
+		"id": "bg_diplomat",
+		"name": "Diplomat",
+		"description": "You are a Diplomat or similar.",
+		"level1": [
+			"skill_diplomacy"
+		],
+		"level2": [
+			"skill_fastTalk"
+		],
+		"level3": [
+			"skill_attentionGrabbing"
+		]
+	},
+	{
+		"id": "bg_survival",
+		"name": "Survival",
+		"description": "You have experience surviving in various terrains.",
+		"level1": [
+			"skill_survivalist"
+		],
+		"level2": [
+			"skill_usingTheLand"
+		],
+		"level3": [
+			"skill_guide"
+		]
+	},
+	{
+		"id": "bg_craft",
+		"name": "Craft",
+		"description": "You have experience crafting.",
+		"level1": [
+			"skill_crafter1"
+		],
+		"level2": [
+			"skill_crafter2",
+			"skill_builder"
+		],
+		"level3": [
+			"skill_adjustment"
+		]
+	}
+	,
+	{
+		"id": "bg_firstAid",
+		"name": "First Aid",
+		"description": "You have experience with giving emergency medical treatment.",
+		"level1": [
+			"skill_emergencyAid"
+		],
+		"level2": [
+			"skill_resuscitate",
+			"skill_patchUp"
+		],
+		"level3": [
+			"skill_surgery"
+		]
+	},
+	{
+		"id": "bg_doctor",
+		"name": "Doctor",
+		"description": "You have experience with more long term medicine.",
+		"level1": [
+			"skill_emergencyAid"
+		],
+		"level2": [
+			"skill_medicalKnowledge"
+		],
+		"level3": [
+			"skill_surgery",
+			"skill_specialMedicine"
+		]
+	},
+	{
+		"id": "bg_alchemy",
+		"name": "Alchemy",
+		"description": "You have experience mixing potions and with the alchemical arts.",
+		"level1": ["skill_mixPotion1"],
+		"level2": ["skill_mixClassDPotion", "skill_mixAlchemicalPaste"],
+		"level3": ["skill_mixClassCPotion"]
+	},
+	{
+		"id": "bg_bountyHunter",
+		"name": "Bounty Hunter",
+		"description": "You have experience hunting people down for rewards.",
+		"level1": ["skill_subdual"],
+		"level2": ["skill_disarmingBlow"],
+		"level3": ["skill_advancedSubdual"]
+	},
+	{
+		"id": "bg_weaponry",
+		"name": "Weaponry",
+		"description": "You have specialised in a specific weapon.  Choose the weapon you have specialised in.",
+		"level1": ["skill_useWeapon"],
+		"level2": ["skill_weaponTalent1", "skill_weaponFinesse"],
+		"level3": ["skill_weaponPotency"]
+	},
+	{
+		"id": "bg_heavyArmour",
+		"name": "Heavy Armour",
+		"description": "You have experience using heavy armour (e.g. plate).",
+		"level1": ["skill_heavyArmourUse"],
+		"level2": ["skill_heavyArmourTraining"],
+		"level3": ["skill_heavyArmourRepair"]
+	},
+	{
+		"id": "bg_mediumArmour",
+		"name": "Medium Armour",
+		"description": "You have experience using medium armour (e.g. leather).",
+		"level1": ["skill_mediumArmourUse"],
+		"level2": ["skill_mediumArmourRepair"],
+		"level3": ["skill_mediumArmourTraining"]
+	},
+	{
+		"id": "bg_mediumShieldUse",
+		"name": "Medium Shield Use",
+		"description": "You have experience using medium sized shields (larger than a buckler).",
+		"level1": ["skill_bucklerUse", "skill_mediumShieldUse"],
+		"level2": ["skill_shieldSwiftness"],
+		"level3": ["skill_solidDefence"]
+	},
+	{
+		"id": "bg_largeShieldUse",
+		"name": "Large Shield Use",
+		"description": "You have experience using large shields.",
+		"level1": ["skill_largeShieldUse"],
+		"level2": ["skill_solidDefence"],
+		"level3": []
+	},
+	{
+		"id": "bg_archery",
+		"name": "Archery",
+		"description": "You have experience using a bow or crossbow.",
+		"level1": ["skill_useBow"],
+		"level2": ["skill_bowMastery1", "skill_bowTalent1"],
+		"level3": ["skill_bowMastery2"]
+	},
+	{
+		"id": "bg_arcaneArcher",
+		"name": "Arcane Archer",
+		"description": "Within the last few months something strange has been happening to Archers, and especially those who are just learning to use a bow. Very few have any idea why, but certain magic-like effects seem to be manifesting as arrows hit their target. Conversely, mages trained in the use of implements find themselves developing a seemingly untrained aptitude for the use of a bow. ",
+		"level1": ["skill_arcaneArcher"],
+		"level2": ["skill_arcaneStrike", "skill_crossAptitude"],
+		"level3": ["skill_arcaneArcherLevel3"],
+		"level4": ["skill_dragonSoulBow"]
+	},
+	{
+		"id": "bg_assassin",
+		"name": "Assassin",
+		"description": "You have experience using stealth and subterfuge to take out individuals.  ",
+		"level1": ["skill_larceny"],
+		"level2": ["skill_backstab", "skill_flanking"],
+		"level3": ["skill_hamstring"]
+	},
+	{
+		"id": "bg_thief",
+		"name": "Thief",
+		"description": "You have experience using stealth and sleight of hand to liberate possessions from people.",
+		"level1": ["skill_larceny"],
+		"level2": ["skill_pickpocket", "skill_flanking"],
+		"level3": ["skill_disguise", "skill_edificeer"]
+	},
+	{
+		"id": "bg_dagger",
+		"name": "Dagger",
+		"description": "You have experience using a dagger or a knife in a fight.  ",
+		"level1": ["skill_knifeFighter"],
+		"level2": ["skill_daggerMastery1", "skill_daggerTalent"],
+		"level3": ["skill_daggerMastery2"]
+	},
+	{
+		"id": "bg_twoWeapon",
+		"name": "Two Weapon",
+		"description": "You have experience dual wielding weapons in combat.",
+		"level1": ["skill_twoWeaponSwiftness", "skill_ambidextrous"],
+		"level2": ["skill_weaponCatching"],
+		"level3": ["skill_twinDefensiveSwiftness"]
+	},
+	{
+		"id": "bg_dabblerMage",
+		"name": "Dabbler Mage",
+		"description": "<b>Special Background - takes two slots</b><br>You have some magical talent, but not enough to truely be considered a mage. Either you are a dabble who has never invested the time and effort to truely learn, or you were simply not talented enough to pick up the skills and abilities required to master the art. You may use mana crystals as usual. A true mage who takes this background will instead gain 2 free level 1 spells from their primary rite. A dabbler mage gains a pool of protomana casts they can use per adventure before any further casting attempt will cause a burnout. ",
+		"level1": ["skill_spellPower", "skill_manaSense"],
+		"level2": ["skill_spellPower", "skill_protomanaTolerance"],
+		"level3": ["skill_greaterSpellPower"]
+	},
+	{
+		"id": "bg_divinelyFavoured",
+		"name": "Divinely Favoured",
+		"description": "<b>Special Background - takes two slots</b><br>You are a lay-worshipper of one of the gods of Acryn. For some reason you have found your words have power, and that by chanting and praying to your god you can bring about minor miracles. People with this background are often travelling preachers, missionaries, or those lay-worshippers who devote the bulk of their lives to aiding the churches. You must choose a single god that favours you. At character gen, a Priest may take this background for 2 free level 1 miracles. Priests may pick this background up in play, with suitable IC justification. A priest with the Divinely Favoured background will realise that using the abilities given to them by another god while they have the gaze of the gods upon them will end badly, almost certainly losing them their gods favour and becoming an excommunicant. ",
+		"level1": ["skill_miraculousPower"],
+		"level2": ["skill_miraculousPower", "skill_divineAura1"],
+		"level3": ["skill_greaterMiraculousPower"]
+	}
+]

@@ -1,0 +1,231 @@
+{
+	"feature": "skill_divineAuraLeader",
+	"skills": {
+		"level1": [
+			{
+				"skill": "skill_diplomacy",
+				"preReqs": {
+
+				}
+			},
+			{
+				"skill": "skill_influence",
+				"preReqs": {
+							
+				}
+			},
+			{
+				"skill": "skill_organisationalTalent",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_useRapier",
+				"preReqs": {
+					"not": ["skill_useSword"]
+				}
+			},
+			{
+				"skill": "skill_useSword",
+				"preReqs": {
+					"not": ["skill_useRapier"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_toughLvl1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_divineFavour1",
+				"preReqs": {
+					
+				}
+			},
+			{
+				"skill": "skill_congregation",
+				"preReqs": {
+					
+				}
+			}
+		],
+		"level2": [
+			{
+				"skill": "skill_fastTalk",
+				"preReqs": {
+					"and": ["skill_diplomacy"]
+				}
+			},
+			{
+				"skill": "skill_nobleConnections",
+				"preReqs": {
+					"and": ["skill_influence"]
+				}
+			},
+			{
+				"skill": "skill_rapierTalent1",
+				"preReqs": {
+					"and": ["skill_useRapier"]
+				}
+			},
+			{
+				"skill": "skill_swordTalent1",
+				"preReqs": {
+					"and": ["skill_useSword"]
+				}
+			},
+			{
+				"skill": "skill_rapierFinesse",
+				"preReqs": {
+					"and": ["skill_rapierTalent1"]
+				}
+			},
+			{
+				"skill": "skill_swordFinesse",
+				"preReqs": {
+					"and": ["skill_swordTalent1"]
+				}
+			},
+			{
+				"skill": "skill_rapierPotency",
+				"preReqs": {
+					"and": ["skill_rapierFinesse"]
+				}
+			},
+			{
+				"skill": "skill_swordPotency",
+				"preReqs": {
+					"and": ["skill_swordFinesse"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl2",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl1"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl2",
+				"preReqs": {
+					"and": ["skill_toughLvl1"]
+				}
+			},
+			{
+				"skill": "skill_touchOfDivinity",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_improvedDivineAura",
+				"preReqs": {
+					"and": ["skill_divineFavour1"]
+				}
+			}
+		],
+		"level3": [
+			{
+				"skill": "skill_disguise",
+				"preReqs": {
+					"and": ["skill_fastTalk"]
+				}
+			},
+			{
+				"skill": "skill_councilConnections",
+				"preReqs": {
+					"and": ["skill_nobleConnections", "skill_organisationalTalent"]
+				}
+			},
+			{
+				"skill": "skill_lightArmour1Lvl3",
+				"preReqs": {
+					"and": ["skill_lightArmourSwiftnessLvl2"]
+				}
+			},
+			{
+				"skill": "skill_blessedRegeneration",
+				"preReqs": {
+					"and": ["skill_toughLvl2", "skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour2",
+				"preReqs": {
+					"and": ["skill_improvedDivineAura"]
+				}
+			},
+			{
+				"skill": "skill_churchBacking",
+				"preReqs": {
+					"and": ["skill_congregation", "skill_improvedDivineAura"]
+				}
+			}
+		],
+		"level4": [
+			{
+				"skill": "skill_distraction",
+				"preReqs": {
+					"and": ["skill_disguise"]
+				}
+			},
+			{
+				"skill": "skill_lightArmourSwiftnessLvl4",
+				"preReqs": {
+					"and": ["skill_lightArmour1Lvl3"]
+				}
+			},
+			{
+				"skill": "skill_toughLvl4",
+				"preReqs": {
+					"and": ["skill_toughLvl2"]
+				}
+			},
+			{
+				"skill": "skill_miracle",
+				"preReqs": {
+					"and": ["skill_touchOfDivinity", "skill_divineMajestyLeader"]
+				}
+			},
+			{
+				"skill": "skill_divineMajestyLeader",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			},
+			{
+				"skill": "skill_divineFavour3",
+				"preReqs": {
+					"and": ["skill_divineFavour2"]
+				}
+			}
+		],
+		"level5": [
+			{
+				"skill": "skill_holyFervour",
+				"preReqs": {
+					"and": ["skill_toughLvl4", "skill_divineMajestyLeader", "skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_intercession",
+				"preReqs": {
+					"and": ["skill_divineFavour3"]
+				}
+			},
+			{
+				"skill": "skill_hierarch",
+				"preReqs": {
+					"and": ["skill_divineFavour3", "skill_churchBacking"]
+				}
+			}
+		]
+	}
+}
