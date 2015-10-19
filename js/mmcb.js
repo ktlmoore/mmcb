@@ -271,6 +271,8 @@ $(document).on('change', '#combatPathSelectBox', updateCombatPath);
 $(document).on('change', '#divineFavour1SelectBox', updateDivineFavour);
 $(document).on('change', '#divineFavour2SelectBox', updateDivineFavour);
 $(document).on('change', '#divineFavour3SelectBox', updateDivineFavour);
+$(document).on('change', '#divineFavourFreebieSelectBox1', updateDivineFavour);
+$(document).on('change', '#divineFavourFreebieSelectBox2', updateDivineFavour);
 
 /* Input listeners */
 $(document).on('input', '#charName', updateCharName);
@@ -758,49 +760,60 @@ function buildAvailableSkills() {
 
 
 	// Then add background skills
-	for (var n = 1; n <= 2; n++) {	
+	console.log(_character.background);
+	if (_character.background[1].id == "bg_divinelyFavoured" || _character.background[2].id == "bg_divinelyFavoured") {
 
-		if (_character.background[n].level1 != undefined) {	
-			for (var i = 0; i < _character.background[n].level1.length; i++) {
-				var s = findById(data._skills, _character.background[n].level1[i]);
-				if (findById(_availableSkills, s.id) == null) {
-					s.free = false;
-					_availableSkills.push(s);
-					_lvl1SkillDiv.append(makeSkillButton(s, 1));
-				} else {
-					findById(_availableSkills, s.id).free = true;
-				}
-			}
+		if (_character.characterClass.name.toLowerCase().contains("priest")) {
+			var s = findById(data._skills, "skill_divineFavourFreebies");
+			s.free = true;
+			_availableSkills.push(s);
+			_lvl1SkillDiv.append(makeSkillButton(s, 1));
 		}
-		if (_character.background[n].level2 != undefined) {	
-			for (var i = 0; i < _character.background[n].level2.length; i++) {
-				var s = findById(data._skills, _character.background[n].level2[i]);			
-				if (findById(_availableSkills, s.id) == null) {
-					s.preReqs = {or: [].concat(_character.background[n].level1)};
-					_availableSkills.push(s);
-					_lvl2SkillDiv.append(makeSkillButton(s, 2));
+	} else {
+		for (var n = 1; n <= 2; n++) {	
+			
+			if (_character.background[n].level1 != undefined) {	
+				for (var i = 0; i < _character.background[n].level1.length; i++) {
+					var s = findById(data._skills, _character.background[n].level1[i]);
+					if (findById(_availableSkills, s.id) == null) {
+						s.free = false;
+						_availableSkills.push(s);
+						_lvl1SkillDiv.append(makeSkillButton(s, 1));
+					} else {
+						findById(_availableSkills, s.id).free = true;
+					}
 				}
 			}
-		}
-		if (_character.background[n].level3 != undefined) {	
-			for (var i = 0; i < _character.background[n].level3.length; i++) {
-				var s = findById(data._skills, _character.background[n].level3[i]);
-				if (findById(_availableSkills, s.id) == null) {
-					s.preReqs = {or: [].concat(_character.background[n].level2)};
-					_availableSkills.push(s);
-					_lvl3SkillDiv.append(makeSkillButton(s, 3));
+			if (_character.background[n].level2 != undefined) {	
+				for (var i = 0; i < _character.background[n].level2.length; i++) {
+					var s = findById(data._skills, _character.background[n].level2[i]);			
+					if (findById(_availableSkills, s.id) == null) {
+						s.preReqs = {or: [].concat(_character.background[n].level1)};
+						_availableSkills.push(s);
+						_lvl2SkillDiv.append(makeSkillButton(s, 2));
+					}
 				}
 			}
-		}
-		if (_character.background[n].level4 != undefined) {	
-			for (var i = 0; i < _character.background[n].level4.length; i++) {
-				var s = findById(data._skills, _character.background[n].level4[i]);
-				if (findById(_availableSkills, s.id) == null) {
-					s.preReqs = {or: [].concat(_character.background[n].level3)};
-					_availableSkills.push(s);
-					_lvl4SkillDiv.append(makeSkillButton(s, 4));
+			if (_character.background[n].level3 != undefined) {	
+				for (var i = 0; i < _character.background[n].level3.length; i++) {
+					var s = findById(data._skills, _character.background[n].level3[i]);
+					if (findById(_availableSkills, s.id) == null) {
+						s.preReqs = {or: [].concat(_character.background[n].level2)};
+						_availableSkills.push(s);
+						_lvl3SkillDiv.append(makeSkillButton(s, 3));
+					}
 				}
 			}
+			if (_character.background[n].level4 != undefined) {	
+				for (var i = 0; i < _character.background[n].level4.length; i++) {
+					var s = findById(data._skills, _character.background[n].level4[i]);
+					if (findById(_availableSkills, s.id) == null) {
+						s.preReqs = {or: [].concat(_character.background[n].level3)};
+						_availableSkills.push(s);
+						_lvl4SkillDiv.append(makeSkillButton(s, 4));
+					}
+				}
+			}			
 		}
 	}
 
@@ -1036,16 +1049,27 @@ function updateDivineFavour(e) {
 			lvl = 4;
 			n = 3;
 			break;
-		default:
+		case "divineFavourFreebieSelectBox1":
 			lvl = 0;
-			n = 0;
+			n = 1;
+			break;
+		case "divineFavourFreebieSelectBox2":
+			lvl = 2;
+			n = 1;
+			break;
+		default:
+			lvl = 5;
+			n = 5;
 			break;
 	}
 	var oldFavour = _character.divineFavour[lvl];
+	console.log(oldFavour, id);
+	
 	_character.divineFavour[lvl] = id;
-	$("#" + oldFavour).prop('disabled', false);
-	$("#" + id).prop('disabled', _character["level" + n].indexOf("skill_divineFavour" + n) >= 0);
+	$("#" + oldFavour).prop('disabled', _character.divineFavour.indexOf(oldFavour) >= 0);
+	$("#" + id).prop('disabled', _character["level" + n].indexOf("skill_divineFavour" + n) >= 0 || _character.level1.indexOf("skill_divineFavourFreebies") >= 0);
 	console.log(_character.divineFavour);
+	
 }
 
 /*
@@ -1141,6 +1165,10 @@ function toggleSkill(id) {
 		if (s.freeMiracle) {
 			$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', false);
 		}
+		if (s.freeMiracles) {
+			$("#" + _character.divineFavour[0]).prop('disabled', false);	
+			$("#" + _character.divineFavour[2]).prop('disabled', false);
+		}
 		_character.skills.splice(skillIndex, 1);
 		_character.spentXP = _character.level1.length + _character.level2.length + _character.level3.length + _character.level4.length + _character.level5.length;
 		for (var i = 0; i < _character.skills.length; i++) {
@@ -1175,6 +1203,16 @@ function toggleSkill(id) {
 				$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', true);
 				if (_character["level" + s.freeMiracle].indexOf(_character.divineFavour[s.freeMiracle]) >= 0) {
 					toggleSkill(_character.divineFavour[s.freeMiracle]);
+				}
+			}
+			if (s.freeMiracles) {
+				$("#" + _character.divineFavour[0]).prop('disabled', true);
+				if (_character.level1.indexOf(_character.divineFavour[0]) >= 0 && _character.divineFavour[2] != _character.divineFavour[0]) {
+					toggleSkill(_character.divineFavour[0]);
+				}
+				$("#" + _character.divineFavour[2]).prop('disabled', true);
+				if (_character.level1.indexOf(_character.divineFavour[2]) >= 0 && _character.divineFavour[0] != _character.divineFavour[2]) {
+					toggleSkill(_character.divineFavour[2]);
 				}
 			}
 			$('#' + id).removeClass("btn-primary").addClass("btn-danger");
@@ -1405,7 +1443,7 @@ function prettyPrintSkill(skill) {
 	if (skill.freeMiracle) {
 		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong> to use once per encounter";
 		result += "<select class='form-control' id='divineFavour" + skill.freeMiracle + "SelectBox'>";
-		if (_character.divineFavour[skill.freeMiracle] == "") {
+		if (_character.divineFavour[skill.freeMiracle] == "None") {
 			result += "<option disabled=true selected=true>Select Free Miracle</option>";
 		} else {
 			result += "<option disabled=true>Select Free Miracle</option>";
@@ -1414,6 +1452,46 @@ function prettyPrintSkill(skill) {
 			var s = _availableSkills[i];
 			if (s.miracle && s.level == skill.freeMiracle) {
 				if (_character.divineFavour[skill.freeMiracle] == s.id) {
+					result += "<option value='" + s.id + "' selected=true>" + s.name + "</option>";
+				} else {
+					result += "<option value='" + s.id + "'>" + s.name + "</option>";
+				}
+				
+			}
+		}
+		result += "</select>";
+	}
+	if (skill.freeMiracles) {
+		result += "<br><br><strong>Free Miracle of Level 1</strong> to use once per encounter";
+		result += "<select class='form-control' id='divineFavourFreebieSelectBox1'>";
+		if (_character.divineFavour[0] == "None") {
+			result += "<option disabled=true selected=true>Select Free Miracle</option>";
+		} else {
+			result += "<option disabled=true>Select Free Miracle</option>";
+		}
+		for (var i = 0; i < _availableSkills.length; i++) {
+			var s = _availableSkills[i];
+			if (s.miracle && s.level == 1) {
+				if (_character.divineFavour[0] == s.id) {
+					result += "<option value='" + s.id + "' selected=true>" + s.name + "</option>";
+				} else {
+					result += "<option value='" + s.id + "'>" + s.name + "</option>";
+				}
+				
+			}
+		}
+		result += "</select>";
+		result += "<br><br><strong>Free Miracle of Level 1</strong> to use once per encounter";
+		result += "<select class='form-control' id='divineFavourFreebieSelectBox2'>";
+		if (_character.divineFavour[2] == "None") {
+			result += "<option disabled=true selected=true>Select Free Miracle</option>";
+		} else {
+			result += "<option disabled=true>Select Free Miracle</option>";
+		}
+		for (var i = 0; i < _availableSkills.length; i++) {
+			var s = _availableSkills[i];
+			if (s.miracle && s.level == 1) {
+				if (_character.divineFavour[2] == s.id) {
 					result += "<option value='" + s.id + "' selected=true>" + s.name + "</option>";
 				} else {
 					result += "<option value='" + s.id + "'>" + s.name + "</option>";
@@ -1482,7 +1560,7 @@ function prepareCharacter() {
 	_character.armour = 2;
 	_character.skillFocus = "None";
 	_character.combatPath = new Object();
-	_character.divineFavour = ["", "", "", "", "", ""];
+	_character.divineFavour = ["None", "None", "None", "None", "None", "None"];
 	_character.knack = "None";
 }
 
@@ -1565,6 +1643,9 @@ function prettyListLevelSkills(arr) {
 		result += s.name;
 		if (s.freeMiracle) {
 			result += " - " + findById(data._skills, _character.divineFavour[s.freeMiracle]).name;
+		}
+		if (s.freeMiracles) {
+			result += " - " + findById(data._skills, _character.divineFavour[0]).name + " and " + findById(data._skills, _character.divineFavour[2]).name;
 		}
 		result += "</li>";
 	}

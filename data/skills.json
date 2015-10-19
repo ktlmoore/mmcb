@@ -690,7 +690,8 @@
 	{
 		"id": "skill_miraculousPower",
 		"name": "Miraculous Power",
-		"description": "Choose one level 1 miracle from the priest tree for your god. You may use this miracle once per encounter by carrying out the appropriate length of roleplaying. "
+		"description": "Choose one level 1 miracle from the priest tree for your god. You may use this miracle once per encounter by carrying out the appropriate length of roleplaying. ",
+		"freeMiracle": 1
 	},
 	{
 		"id": "skill_divineAura1",
@@ -700,7 +701,8 @@
 	{
 		"id": "skill_greaterMiraculousPower",
 		"name": "Greater Miraculous Power",
-		"description": "Choose one level 2 miracle from the priest tree for your god. You may use this miracle once per encounter by carrying out the appropriate length of roleplaying. "
+		"description": "Choose one level 2 miracle from the priest tree for your god. You may use this miracle once per encounter by carrying out the appropriate length of roleplaying. ",
+		"freeMiracle": 2
 	},
 	{
 		"id": "skill_determination",
@@ -3412,5 +3414,16 @@
 		"id": "skill_bindingKnack",
 		"name": "Knack: Binding",
 		"description": "At will, the mage can slip out of any mundane bond"
+	},
+	{
+		"id": "skill_divineFavourFreebies",
+		"name": "Divine Favour Free Miracles",
+		"description": "Divine Favour taken by a Priest gives them 2 free Level 1 miracles.",
+		"freeMiracles": 1
+	},
+	{
+		"id": "None",
+		"name": "None",
+		"description": "None"
 	}
 ]
