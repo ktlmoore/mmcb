@@ -268,6 +268,9 @@ $(document).on('change', '#background2SelectBox', updateBackground2);
 $(document).on('change', '#traitorPretenceSelectBox', updatePretence);
 $(document).on('change', '#journeymanSkillFocusSelectBox', updateJourneymanSkillFocus);
 $(document).on('change', '#combatPathSelectBox', updateCombatPath);
+$(document).on('change', '#divineFavour1SelectBox', updateDivineFavour);
+$(document).on('change', '#divineFavour2SelectBox', updateDivineFavour);
+$(document).on('change', '#divineFavour3SelectBox', updateDivineFavour);
 
 /* Input listeners */
 $(document).on('input', '#charName', updateCharName);
@@ -981,6 +984,40 @@ function updateBackground2(e) {
 }
 
 /*
+ *	Update Divine Favour miracles changing
+ */
+function updateDivineFavour(e) {
+
+	var selectId = e.target.id;
+	var id = e.target.value;
+	var lvl = 0;
+	var n = 0;
+	switch (selectId) {
+		case "divineFavour1SelectBox":
+			lvl = 1;
+			n = 1;
+			break;
+		case "divineFavour3SelectBox":
+			lvl = 3;
+			n = 2;
+			break;
+		case "divineFavour4SelectBox":
+			lvl = 4;
+			n = 3;
+			break;
+		default:
+			lvl = 0;
+			n = 0;
+			break;
+	}
+	var oldFavour = _character.divineFavour[lvl];
+	_character.divineFavour[lvl] = id;
+	$("#" + oldFavour).prop('disabled', false);
+	$("#" + id).prop('disabled', _character["level" + n].indexOf("skill_divineFavour" + n) >= 0);
+	console.log(_character.divineFavour);
+}
+
+/*
  *	React to details changing
  */
 function updateCharName(e) {
@@ -1069,6 +1106,10 @@ function toggleSkill(id) {
 		} else {
 			console.log("Skill button is missing a level, " + id);
 		}
+		var s = findById(_availableSkills, id);
+		if (s.freeMiracle) {
+			$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', false);
+		}
 		_character.skills.splice(skillIndex, 1);
 		_character.spentXP = _character.level1.length + _character.level2.length + _character.level3.length + _character.level4.length + _character.level5.length;
 		for (var i = 0; i < _character.skills.length; i++) {
@@ -1100,12 +1141,9 @@ function toggleSkill(id) {
 				spendXP();
 			}
 			if (s.freeMiracle) {
-				_character.freeMiraclesLeft[s.freeMiracle]++;
-
-			}
-			if (s.miracle) {
-				if (_character.freeMiraclesLeft[s.level] > 0) {
-					_character.freeMiraclesLeft--;
+				$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', true);
+				if (_character["level" + s.freeMiracle].indexOf(_character.divineFavour[s.freeMiracle]) >= 0) {
+					toggleSkill(_character.divineFavour[s.freeMiracle]);
 				}
 			}
 			$('#' + id).removeClass("btn-primary").addClass("btn-danger");
@@ -1115,7 +1153,7 @@ function toggleSkill(id) {
 		}
 	}
 	validatePreReqs();
-	checkFreeMiracles();
+	
 }
 
 function validatePreReqs() {
@@ -1131,38 +1169,6 @@ function validatePreReqs() {
 			}
 		}
 	}
-}
-
-function checkFreeMiracles() {
-	
-	var m = _character.freeMiraclesLeft;
-	console.log(m);
-	if (allIndicesAre(0, m)) {
-		// No miracles left, return
-		return;
-	} else {
-		for (var i = 1; i < _availableSkills.length; i++) {
-			var s = _availableSkills[i];
-			if (!s.level) {
-				break;
-			}
-			if (_character.freeMiraclesLeft[s.level] > 0) {
-				_availableSkills[i].free = true;
-			}
-		}
-		for (var lvl = 1; lvl <= 5; lvl++) {
-			console.log(lvl);
-			for (var i = 1; i < _availableSkills.length; i++) {
-				if (_availableSkills[i].miracle && _availableSkills[i].level == lvl) {
-					_availableSkills[i].free = true;
-				} else if (_availableSkills[i].miracle) {
-					_availableSkills[i].free = false;
-				}
-			}
-		}
-	}
-	console.log(_availableSkills);
-	
 }
 
 function allIndicesAre(val, arr) {
@@ -1366,7 +1372,25 @@ function prettyPrintSkill(skill) {
 		result += "</i>";
 	}
 	if (skill.freeMiracle) {
-		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong>";
+		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong> to use once per encounter";
+		result += "<select class='form-control' id='divineFavour" + skill.freeMiracle + "SelectBox'>";
+		if (_character.divineFavour[skill.freeMiracle] == "") {
+			result += "<option disabled=true selected=true>Select Free Miracle</option>";
+		} else {
+			result += "<option disabled=true>Select Free Miracle</option>";
+		}
+		for (var i = 0; i < _availableSkills.length; i++) {
+			var s = _availableSkills[i];
+			if (s.miracle && s.level == skill.freeMiracle) {
+				if (_character.divineFavour[skill.freeMiracle] == s.id) {
+					result += "<option value='" + s.id + "' selected=true>" + s.name + "</option>";
+				} else {
+					result += "<option value='" + s.id + "'>" + s.name + "</option>";
+				}
+				
+			}
+		}
+		result += "</select>";
 	}
 	if (skill.free) {
 		result += "<br><br><strong>Free!</strong>";
@@ -1374,10 +1398,6 @@ function prettyPrintSkill(skill) {
 	
 
 	return result;
-}
-
-function buildFreeMiracleModal(level) {
-
 }
 
 /*
@@ -1431,7 +1451,7 @@ function prepareCharacter() {
 	_character.armour = 2;
 	_character.skillFocus = "None";
 	_character.combatPath = new Object();
-	_character.freeMiraclesLeft = [0, 0, 0, 0, 0, 0];
+	_character.divineFavour = ["", "", "", "", "", ""];
 }
 
 /*
@@ -1472,6 +1492,14 @@ function prettyPrintCharacter() {
 	result += "</p>";
 
 	result += "<h3>Skills</h3>";
+
+	result += "<strong>Feature</strong>";
+	result += "<ul>";
+	result += "<li>"
+	result += _character.characterClass.feature;
+	console.log(data._classes);
+	result += "</li>";
+	result += "</ul>";
 	if (_character.level1.length > 0) {
 		result += "<strong>Level 1</strong>" + prettyListLevelSkills(_character.level1);
 		if (_character.level2.length > 0) {
@@ -1502,7 +1530,13 @@ function prettyPrintCharacter() {
 function prettyListLevelSkills(arr) {
 	var result = "<ul>";
 	for (var i = 0; i < arr.length; i++) {
-		result += "<li>" + findById(data._skills, arr[i]).name + "</li>";
+		var s = findById(data._skills, arr[i]);
+		result += "<li>";
+		result += s.name;
+		if (s.freeMiracle) {
+			result += " - " + findById(data._skills, _character.divineFavour[s.freeMiracle]).name;
+		}
+		result += "</li>";
 	}
 	result += "</ul>";
 	return result;
