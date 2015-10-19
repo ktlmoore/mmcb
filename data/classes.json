@@ -17,7 +17,7 @@
 		"id": "class_mage",
 		"name": "Mage",
 		"description": "Capable of using into one of five magical rites to call forth arcane power to overcome the challenges that face them.",
-		"feature": "Spellcasting",
+		"feature": "skill_spellcasting",
 		"image": "mage.png"
 	},
 	"class_priest": {

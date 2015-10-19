@@ -3382,5 +3382,35 @@
 		"id": "skill_focus",
 		"name": "Skill Focus",
 		"description": "You gain a skill depending on your specialisation."
+	},
+	{
+		"id": "skill_spellcasting",
+		"name": "Spellcasting",
+		"description": "See <a href='http://mementomundi.chaosdeathfish.com/mage'>Mage</a> for more details.  Choose a Primary Rite to select a Knack."
+	},
+	{
+		"id": "skill_woundingKnack",
+		"name": "Knack: Wounding",
+		"description": "At will, examining a wound allows the mage to know what caused it"
+	},
+	{
+		"id": "skill_fracturingKnack",
+		"name": "Knack: Fracturing",
+		"description": "At will, examining a broken object allows the mage determine how it was broken"
+	},
+	{
+		"id": "skill_scribingKnack",
+		"name": "Knack: Scribing",
+		"description": "At will, the mage can read any written language that has not been magically encoded"
+	},
+	{
+		"id": "skill_consumptionKnack",
+		"name": "Knack: Consumption",
+		"description": "At will, the mage can identify any material by taste"
+	},
+	{
+		"id": "skill_bindingKnack",
+		"name": "Knack: Binding",
+		"description": "At will, the mage can slip out of any mundane bond"
 	}
 ]

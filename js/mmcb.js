@@ -851,6 +851,9 @@ function updateClass(id) {
 
 	if (id.toLowerCase().contains("mage")) {
 		_mageRitesSelect.show();
+		if (_character.knack != "None") {
+			_character.characterClass.feature = _character.knack;
+		}
 	} else {
 		_mageRitesSelect.hide();
 	}
@@ -960,7 +963,28 @@ function updatePrimaryRite(e) {
 		_character.primaryRite = "None";
 	}
 
+	switch (id) {
+		case "rite_wounding":
+			_character.knack = "skill_woundingKnack";
+			break;
+		case "rite_scribing":
+			_character.knack = "skill_scribingKnack";
+			break;
+		case "rite_consumption":
+			_character.knack = "skill_consumptionKnack";
+			break;
+		case "rite_fracturing":
+			_character.knack = "skill_fracturingKnack";
+			break;
+		case "rite_binding":
+			_character.knack = "skill_bindingKnack";
+			break;
+		default:
+			break;
+	}
+
 	buildAvailableSkills();
+	updateClass("class_mage");
 }
 function updateSecondaryRite(e) {
 	var id = e.target.value;
@@ -1459,6 +1483,7 @@ function prepareCharacter() {
 	_character.skillFocus = "None";
 	_character.combatPath = new Object();
 	_character.divineFavour = ["", "", "", "", "", ""];
+	_character.knack = "None";
 }
 
 /*
@@ -1521,8 +1546,6 @@ function prettyPrintCharacter() {
 				}
 			}
 		}
-	} else {
-		result += "None yet :(";
 	}
 
 	result += "<p><strong>Experience: </strong>" + _character.spentXP + "/" + _character.availableXP + "</p>";
