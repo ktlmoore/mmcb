@@ -268,6 +268,9 @@ $(document).on('change', '#background2SelectBox', updateBackground2);
 $(document).on('change', '#traitorPretenceSelectBox', updatePretence);
 $(document).on('change', '#journeymanSkillFocusSelectBox', updateJourneymanSkillFocus);
 $(document).on('change', '#combatPathSelectBox', updateCombatPath);
+$(document).on('change', '#divineFavour1SelectBox', updateDivineFavour);
+$(document).on('change', '#divineFavour2SelectBox', updateDivineFavour);
+$(document).on('change', '#divineFavour3SelectBox', updateDivineFavour);
 
 /* Input listeners */
 $(document).on('input', '#charName', updateCharName);
@@ -981,6 +984,31 @@ function updateBackground2(e) {
 }
 
 /*
+ *	Update Divine Favour miracles changing
+ */
+function updateDivineFavour(e) {
+	var selectId = e.target.id;
+	var id = e.target.value;
+	var lvl = 0;
+	switch (selectId) {
+		case "divineFavour1SelectBox":
+			lvl = 1;
+			break;
+		case "divineFavour3SelectBox":
+			lvl = 3;
+			break;
+		case "divineFavour4SelectBox":
+			lvl = 4;
+			break;
+		default:
+			lvl = 0;
+			break;
+	}
+	_character.divineFavour[lvl] = id;
+	console.log(_character.divineFavour);
+}
+
+/*
  *	React to details changing
  */
 function updateCharName(e) {
@@ -1326,6 +1354,24 @@ function prettyPrintSkill(skill) {
 	}
 	if (skill.freeMiracle) {
 		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong> to use once per encounter";
+		result += "<select class='form-control' id='divineFavour" + skill.freeMiracle + "SelectBox'>";
+		if (_character.divineFavour[skill.freeMiracle] == "") {
+			result += "<option disabled=true selected=true>Select Free Miracle</option>";
+		} else {
+			result += "<option disabled=true>Select Free Miracle</option>";
+		}
+		for (var i = 0; i < _availableSkills.length; i++) {
+			var s = _availableSkills[i];
+			if (s.miracle && s.level == skill.freeMiracle) {
+				if (_character.divineFavour[skill.freeMiracle] == s.id) {
+					result += "<option value='" + s.id + "' selected=true>" + s.name + "</option>";
+				} else {
+					result += "<option value='" + s.id + "'>" + s.name + "</option>";
+				}
+				
+			}
+		}
+		result += "</select>";
 	}
 	if (skill.free) {
 		result += "<br><br><strong>Free!</strong>";
@@ -1386,7 +1432,7 @@ function prepareCharacter() {
 	_character.armour = 2;
 	_character.skillFocus = "None";
 	_character.combatPath = new Object();
-	_character.freeMiraclesLeft = [0, 0, 0, 0, 0, 0];
+	_character.divineFavour = ["", "", "", "", "", ""];
 }
 
 /*
