@@ -987,24 +987,33 @@ function updateBackground2(e) {
  *	Update Divine Favour miracles changing
  */
 function updateDivineFavour(e) {
+
 	var selectId = e.target.id;
 	var id = e.target.value;
 	var lvl = 0;
+	var n = 0;
 	switch (selectId) {
 		case "divineFavour1SelectBox":
 			lvl = 1;
+			n = 1;
 			break;
 		case "divineFavour3SelectBox":
 			lvl = 3;
+			n = 2;
 			break;
 		case "divineFavour4SelectBox":
 			lvl = 4;
+			n = 3;
 			break;
 		default:
 			lvl = 0;
+			n = 0;
 			break;
 	}
+	var oldFavour = _character.divineFavour[lvl];
 	_character.divineFavour[lvl] = id;
+	$("#" + oldFavour).prop('disabled', false);
+	$("#" + id).prop('disabled', _character["level" + n].indexOf("skill_divineFavour" + n) >= 0);
 	console.log(_character.divineFavour);
 }
 
@@ -1097,6 +1106,10 @@ function toggleSkill(id) {
 		} else {
 			console.log("Skill button is missing a level, " + id);
 		}
+		var s = findById(_availableSkills, id);
+		if (s.freeMiracle) {
+			$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', false);
+		}
 		_character.skills.splice(skillIndex, 1);
 		_character.spentXP = _character.level1.length + _character.level2.length + _character.level3.length + _character.level4.length + _character.level5.length;
 		for (var i = 0; i < _character.skills.length; i++) {
@@ -1126,6 +1139,12 @@ function toggleSkill(id) {
 			var s = findById(_availableSkills, id);
 			if (!s.free) {
 				spendXP();
+			}
+			if (s.freeMiracle) {
+				$("#" + _character.divineFavour[s.freeMiracle]).prop('disabled', true);
+				if (_character["level" + s.freeMiracle].indexOf(_character.divineFavour[s.freeMiracle]) >= 0) {
+					toggleSkill(_character.divineFavour[s.freeMiracle]);
+				}
 			}
 			$('#' + id).removeClass("btn-primary").addClass("btn-danger");
 			_noXPLeftWarning.hide();
