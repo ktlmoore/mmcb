@@ -1522,7 +1522,13 @@ function prettyPrintCharacter() {
 function prettyListLevelSkills(arr) {
 	var result = "<ul>";
 	for (var i = 0; i < arr.length; i++) {
-		result += "<li>" + findById(data._skills, arr[i]).name + "</li>";
+		var s = findById(data._skills, arr[i]);
+		result += "<li>";
+		result += s.name;
+		if (s.freeMiracle) {
+			result += " - " + findById(data._skills, _character.divineFavour[s.freeMiracle]).name;
+		}
+		result += "</li>";
 	}
 	result += "</ul>";
 	return result;
