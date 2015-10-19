@@ -3372,6 +3372,15 @@
 		"id": "skill_noWallWithstand",
 		"name": "No Wall Withstand",
 		"description": "Your experience defending your own walls has left you with no doubts about the problems they pose in the hands of defenders. With much practice and some modifications to your own weapons have provided you with a semblance of a solution. Once per an adventure you can have an encounter where you make full use of the strength of your modified weapon to apply massive damage to the enemy. During this encounter you may call BLAST TRIPLE three times on successfully hitting an opponent. In the event you are engaged in combat with an enemy ensconced behind a wall (and are using a bow or crossbow) you can instead call this damage directly as the force of your blows cause parts of the wall to fracture, injuring those behind it."
+	},
+	{                
+        "id": "skill_divineAura",
+        "name": "Divine Aura",
+        "description": "You gain an ability depending on the god you follow."
+	},
+	{
+		"id": "skill_focus",
+		"name": "Skill Focus",
+		"description": "You gain a skill depending on your specialisation."
 	}
-
 ]

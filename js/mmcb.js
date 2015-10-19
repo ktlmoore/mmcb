@@ -834,8 +834,12 @@ function updateClassEvent(e){
 }
 
 function updateClass(id) {
-	_classDescription.html(data._classes[id].description);
+	
 	_classImage.html(imagify(data._classes[id].image, 150, 200));
+
+	$("#className").html(data._classes[id].name);
+
+	_character.characterClass = data._classes[id];
 
 	if (id.toLowerCase().contains("priest")) {
 		_priestTypeSelect.show();
@@ -853,6 +857,9 @@ function updateClass(id) {
 
 	if (id.toLowerCase().contains("journeyman")) {
 		_journeymanSkillFocusSelect.show();
+		if (_character.skillFocus != "None") {
+			_character.characterClass.feature = _character.skillFocus;
+		}
 	} else {
 		_journeymanSkillFocusSelect.hide();
 	}
@@ -863,9 +870,7 @@ function updateClass(id) {
 		_combatPathSelect.hide();
 	}
 
-	$("#className").html(data._classes[id].name);
-
-	_character.characterClass = data._classes[id];
+	_classDescription.html(prettyPrintClassDescription(id));
 
 	buildAvailableSkills();
 }
@@ -926,6 +931,8 @@ function updateJourneymanSkillFocus(e) {
 	}
 
 	validatePreReqs();
+	updateClass("class_journeyman");
+
 }
 
 /*
@@ -1496,7 +1503,7 @@ function prettyPrintCharacter() {
 	result += "<strong>Feature</strong>";
 	result += "<ul>";
 	result += "<li>"
-	result += _character.characterClass.feature;
+	result += findById(data._skills, _character.characterClass.feature).name;
 	console.log(data._classes);
 	result += "</li>";
 	result += "</ul>";
@@ -1539,6 +1546,15 @@ function prettyListLevelSkills(arr) {
 		result += "</li>";
 	}
 	result += "</ul>";
+	return result;
+}
+
+function prettyPrintClassDescription(id) {
+	var result = "";
+	result += data._classes[id].description;
+	var feature = findById(data._skills, _character.characterClass.feature);
+	result += "<br><br><strong>Class Feature: </strong>";
+	result += prettyPrintSkill(feature);
 	return result;
 }
 

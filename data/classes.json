@@ -24,6 +24,7 @@
 		"id": "class_priest",
 		"name": "Priest",
 		"description": "Clerics capable of calling down divine favour to empower them in battle and work miracles.",
+		"feature": "skill_divineAura",
 		"image": "priest.png"
 	},
 	"class_wayfinder": {
