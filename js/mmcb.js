@@ -1099,15 +1099,6 @@ function toggleSkill(id) {
 			if (!s.free) {
 				spendXP();
 			}
-			if (s.freeMiracle) {
-				_character.freeMiraclesLeft[s.freeMiracle]++;
-
-			}
-			if (s.miracle) {
-				if (_character.freeMiraclesLeft[s.level] > 0) {
-					_character.freeMiraclesLeft--;
-				}
-			}
 			$('#' + id).removeClass("btn-primary").addClass("btn-danger");
 			_noXPLeftWarning.hide();
 		} else {
@@ -1115,7 +1106,7 @@ function toggleSkill(id) {
 		}
 	}
 	validatePreReqs();
-	checkFreeMiracles();
+	
 }
 
 function validatePreReqs() {
@@ -1131,38 +1122,6 @@ function validatePreReqs() {
 			}
 		}
 	}
-}
-
-function checkFreeMiracles() {
-	
-	var m = _character.freeMiraclesLeft;
-	console.log(m);
-	if (allIndicesAre(0, m)) {
-		// No miracles left, return
-		return;
-	} else {
-		for (var i = 1; i < _availableSkills.length; i++) {
-			var s = _availableSkills[i];
-			if (!s.level) {
-				break;
-			}
-			if (_character.freeMiraclesLeft[s.level] > 0) {
-				_availableSkills[i].free = true;
-			}
-		}
-		for (var lvl = 1; lvl <= 5; lvl++) {
-			console.log(lvl);
-			for (var i = 1; i < _availableSkills.length; i++) {
-				if (_availableSkills[i].miracle && _availableSkills[i].level == lvl) {
-					_availableSkills[i].free = true;
-				} else if (_availableSkills[i].miracle) {
-					_availableSkills[i].free = false;
-				}
-			}
-		}
-	}
-	console.log(_availableSkills);
-	
 }
 
 function allIndicesAre(val, arr) {
@@ -1366,7 +1325,7 @@ function prettyPrintSkill(skill) {
 		result += "</i>";
 	}
 	if (skill.freeMiracle) {
-		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong>";
+		result += "<br><br><strong>Free Miracle of Level " + skill.freeMiracle + "</strong> to use once per encounter";
 	}
 	if (skill.free) {
 		result += "<br><br><strong>Free!</strong>";
@@ -1374,10 +1333,6 @@ function prettyPrintSkill(skill) {
 	
 
 	return result;
-}
-
-function buildFreeMiracleModal(level) {
-
 }
 
 /*
