@@ -1492,6 +1492,14 @@ function prettyPrintCharacter() {
 	result += "</p>";
 
 	result += "<h3>Skills</h3>";
+
+	result += "<strong>Feature</strong>";
+	result += "<ul>";
+	result += "<li>"
+	result += _character.characterClass.feature;
+	console.log(data._classes);
+	result += "</li>";
+	result += "</ul>";
 	if (_character.level1.length > 0) {
 		result += "<strong>Level 1</strong>" + prettyListLevelSkills(_character.level1);
 		if (_character.level2.length > 0) {
